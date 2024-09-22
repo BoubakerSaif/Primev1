@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema(
     discord_avatar: { type: String },
     email: { type: String, unique: true },
     verified: { type: Boolean },
-    guilds: [String],
+    guilds: [{}],
     role: { type: String, default: "User" },
   },
   { timestamps: true }

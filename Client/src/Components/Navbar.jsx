@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { IoPeopleSharp } from "react-icons/io5";
 import { FaPlayCircle } from "react-icons/fa";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
 
-// import gta2 from "../assets/images/gta2.mp4";
-// import gta3 from "../assets/images/gta3.mp4";
 const Navbar = () => {
   const dispatch = useDispatch();
   const logout = (e) => {
@@ -17,7 +14,6 @@ const Navbar = () => {
   };
 
   const { userInfo } = useSelector((state) => state.auth);
-  console.log(userInfo);
   return (
     <div className="w-full h-full relative flex justify-center items-center  ">
       <video
@@ -44,7 +40,7 @@ const Navbar = () => {
           </Link>
           <div className=" mt-3 ml-3 h-fit flex items-center gap-2 bg-black bg-opacity-30 p-1  rounded-lg">
             <IoPeopleSharp className="text-xl" />
-            <p>: 60</p>
+            <p>: 0</p>
           </div>
         </div>
         <div className="flex justify-between gap-10  mr-48 lg:mr-0 font-medium cursor-pointer h-fit max-lg:hidden text-base mt-4 ">
@@ -63,9 +59,9 @@ const Navbar = () => {
         </div>
         {userInfo ? (
           <div className="flex items-center gap-5 ">
-            <p className="mt-2"> {userInfo.global_name} </p>
+            <p className="mt-2"> {userInfo?.global_name} </p>
             <img
-              src={`https://cdn.discordapp.com/avatars/${userInfo.discord_id}/${userInfo.discord_avatar}`}
+              src={`https://cdn.discordapp.com/avatars/${userInfo?.discord_id}/${userInfo?.discord_avatar}`}
               className="w-14 h-14 mt-1 rounded-3xl"
             />
             <Link

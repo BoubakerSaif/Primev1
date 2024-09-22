@@ -8,6 +8,7 @@ import axios from "axios";
 import User from "./Models/userModel.js";
 import { protect } from "./Middlewares/authMiddleWare.js";
 import jwt from "jsonwebtoken";
+import { loginUser } from "./Controllers/userControllers.js";
 const app = express();
 dotenv.config();
 connectDB();
@@ -51,49 +52,47 @@ app.get("/auth/redirect", async (req, res) => {
       },
     }
   );
+  // res.send(userGuilds.data);
   const { id, username, avatar, email, verified, global_name } =
     userResponse.data;
 
   const user = await User.findOne({ discord_id: id });
-  if (userGuilds?.data?.filter((el) => el.id == "1273036528196653077")) {
-    if (!user) {
-      const newUser = await User.create({
-        discord_id: id,
-        global_name: global_name,
-        discord_username: username,
-        discord_avatar: avatar,
-        email: email,
-        verified: verified,
-      });
-      const token = await jwt.sign(
-        { userId: newUser._id },
-        process.env.JWT_SECRET,
-        {
-          expiresIn: "7d",
-        }
-      );
-      res.cookie("JWT", token);
-      res.redirect(process.env.CLIENT_REDIRECT_URL);
-    } else {
-      user.discord_username = username || user.discord_username;
-      user.global_name = global_name || user.global_name;
-      user.discord_avatar = avatar || user.discord_avatar;
-      user.email = email || user.email;
-      user.verified = verified || user.verified;
-      const updatedUser = await user.save();
-
-      const token = await jwt.sign(
-        { userId: updatedUser._id },
-        process.env.JWT_SECRET,
-        {
-          expiresIn: "7d",
-        }
-      );
-      res.cookie("JWT", token);
-      res.redirect(process.env.CLIENT_REDIRECT_URL);
-    }
+  if (!user) {
+    const newUser = await User.create({
+      discord_id: id,
+      global_name: global_name,
+      discord_username: username,
+      guilds: userGuilds.data,
+      discord_avatar: avatar,
+      email: email,
+      verified: verified,
+    });
+    const token = await jwt.sign(
+      { userId: newUser._id },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "7d",
+      }
+    );
+    res.cookie("JWT", token);
+    res.redirect(process.env.CLIENT_REDIRECT_URL);
   } else {
-    throw new Error("You are not member of our Prime Discord");
+    user.discord_username = username || user.discord_username;
+    user.global_name = global_name || user.global_name;
+    user.discord_avatar = avatar || user.discord_avatar;
+    user.email = email || user.email;
+    user.verified = verified || user.verified;
+    const updatedUser = await user.save();
+
+    const token = await jwt.sign(
+      { userId: updatedUser._id },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "7d",
+      }
+    );
+    res.cookie("JWT", token);
+    res.redirect(process.env.CLIENT_REDIRECT_URL);
   }
 });
 app.listen(port, () => {

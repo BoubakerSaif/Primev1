@@ -10,7 +10,7 @@ const protect = asyncHandler(async (req, res, next) => {
     req.User = await User.findById(decoded.userId);
     next();
   } catch (error) {
-    console.log(error);
+    next();
   }
 });
 

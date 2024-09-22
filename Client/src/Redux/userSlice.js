@@ -1,19 +1,20 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { clearCredentials, setCredentials } from "./authSlice";
+import { toast } from "react-hot-toast";
 
 export const loginUser = createAsyncThunk(
   "user/login",
-  async (payload, { dispatch }) => {
+  async (payload, { dispatch, rejectWithValue }) => {
     axios.defaults.withCredentials = true;
 
     try {
       const { data } = await axios.get("http://localhost:5000/auth/user/me");
-      console.log(data[0]);
-      dispatch(setCredentials(data[0]));
+      dispatch(setCredentials(data));
+      // toast.success("Logged in");
       return data;
     } catch (error) {
-      console.log(error);
+      toast.error(rejectWithValue(error.response.data));
     }
   }
 );
@@ -42,7 +43,7 @@ const userSlice = createSlice({
       state.loading = false;
       state.LoggedInUser = action.payload;
     });
-    builder.addCase(loginUser.rejected, (state) => {
+    builder.addCase(loginUser.rejected, (state, action) => {
       state.loading = false;
     });
     ////////////////////////////////////////////////////////////////
