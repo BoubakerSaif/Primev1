@@ -104,7 +104,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <div className="lg:hidden absolute sm:top-[30%] h-fit ">
+      <div className="lg:hidden absolute max-md:top-[30%] max-lg:top-[25%] h-fit ">
         {show && (
           <div className="w-screen text-white text-center flex justify-center gap-4   items-center    text-sm font-semibold   ">
             <Link className=" rounded-md bg-[##0e0e0f] w-fit  ">HOME</Link>

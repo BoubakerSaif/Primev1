@@ -5,18 +5,12 @@ import farmer from "../assets/images/farmer.png";
 import bsman from "../assets/images/business_man.png";
 import governor from "../assets/images/governor.png";
 import warden from "../assets/images/warden_1.png";
-import herores from "../assets/images/herores.png";
-import city from "../assets/images/city.png";
-import { IoPeopleSharp } from "react-icons/io5";
 import { FaPlayCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { FaDiscord } from "react-icons/fa";
-import los from "../assets/images/los.jpg";
 import business from "../assets/images/business.jpg";
 
 const Hero = () => {
   const [neon, setNeon] = useState("grayscale");
-  const [show, setShow] = useState(false);
 
   return (
     <div className=" text-white relative ">
