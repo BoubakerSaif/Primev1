@@ -34,7 +34,10 @@ const Footer = () => {
         >
           <p>Discord</p>
         </Link>
-        <Link className="text-gray-400 hover:translate-x-2 font-medium text-sm duration-300 w-fit ">
+        <Link
+          to={"/rpguide"}
+          className="text-gray-400 hover:translate-x-2 font-medium text-sm duration-300 w-fit "
+        >
           <p>Role Play Guide</p>
         </Link>
       </div>

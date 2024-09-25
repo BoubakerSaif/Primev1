@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { IoPeopleSharp } from "react-icons/io5";
 import { FaPlayCircle } from "react-icons/fa";
@@ -16,9 +16,10 @@ const Navbar = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
+  const location = useLocation();
 
   return (
-    <div className="w-full h-full relative flex justify-center items-center  ">
+    <div className="w-full h-full relative flex justify-center items-center bg-[#010101]  ">
       <video
         src={
           "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727220400/Gray_Red_Bold_History_YouTube_Thumbnail_3_ag3yta.mp4"
@@ -26,9 +27,13 @@ const Navbar = () => {
         autoPlay
         loop
         muted
-        className="w-full   "
+        className={`w-full ${location.pathname == "/rpguide" ? "hidden" : ""}`}
       />
-      <div className="flex justify-around text-white w-full font-Poppins top-0 px-5 absolute mt-6 ">
+      <div
+        className={`flex justify-around text-white w-full font-Poppins top-0 px-5  ${
+          location.pathname == "/rpguide" ? "" : "absolute "
+        }  mt-6`}
+      >
         <div className="lg:hidden max-lg:block max-lg:mt-1">
           {show && (
             <IoMdArrowDropup
@@ -120,7 +125,9 @@ const Navbar = () => {
       <Link
         target="_blank"
         to="https://youtu.be/sk9slehg6Rc?si=qP6i1yfv5_2QqB6Q "
-        className=" group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-white border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white    "
+        className={`${
+          location.pathname == "/rpguide" ? "hidden" : ""
+        } group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-white border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white   `}
       >
         <FaPlayCircle className="text-5xl  text-white sm:text-3xl group-hover:text-black " />
         <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black max-lg:text-sm   ">
