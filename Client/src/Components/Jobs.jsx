@@ -17,146 +17,130 @@ const Jobs = () => {
           what we give players
         </p>
         <p className="text-5xl">
-          Our world of <span className="text-pink-600">factions,</span>
+          Our world of <span className="text-white">factions,</span>
         </p>
-        <p className="text-5xl text-pink-600">businesses and jobs</p>
+        <p className="text-5xl text-white">businesses and jobs</p>
       </div>
       <div className="flex justify-center gap-20 items-center  font-Poppins  max-2xl:flex-wrap  ">
-        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-pink-600  ">
+        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-white  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
-            <p className="font-bold text-2xl"> Government & LEO Factions</p>
+            <p className="font-bold text-2xl"> Government and Legal Factions</p>
             <p className="text-md">
-              Check out our wide variety of government & LEO factions
+              Check out our wide variety and new concept for the legal podium
             </p>
           </div>
 
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer     ">
+          <div className="h-[120px] justify-between flex items-center group hover:cursor-pointer     ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME COP
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Become Warden
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
-              </span>
+              <span className="font-bold ">Warden Branch</span>
             </p>
             <img src={warden} className="w-28   " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer    ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer    ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME EMS & RDT
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Become EMS & RDT
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Emergency Medical Services
-              </span>
+              <span className="font-bold ">Scientist federation</span>
             </p>
             <img src={ems} className="w-28   " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer    ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer    ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME RANGER
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Become Ranger
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
-              </span>
+              <span className="font-bold ">Ranger Legion</span>
             </p>
             <img src={ranger} className="w-28  " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer     ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer     ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME KEEPER
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Become Keeper
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
-              </span>
+              <span className="font-bold ">Wall Keepers Correction</span>
             </p>
             <img src={keepers} className="w-28  " />
           </div>
         </div>
-        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-pink-600  ">
+        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-white  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
             <p className="font-bold text-2xl"> Businesses</p>
             <p className="text-md">
-              Browse dozens of active businesses and engage in high quality role
-              play!
+              Dive into dozens of active and new businesses, strive in a high
+              competitive atmoshpere
             </p>
           </div>
 
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer    ">
+          <div className="h-[120px] justify-between flex items-center    group hover:cursor-pointer    ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME COP
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                TABAC
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
-              </span>
+              <span className="font-bold ">Explore the world of TABAC </span>
             </p>
-            <img src={az1} className="w-28 " />
+            <img src={az1} className="w-36 " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer   ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600  w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME EMS & RDT
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white  w-fit py-1 px-2 rounded-md font-semibold">
+                Logistics
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Emergency Medical Services
+              <span className="font-bold ">
+                Different trucking and logistics businesses
               </span>
             </p>
-            <img src={az2} className="w-28 " />
+            <img src={az2} className="w-32 " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer   ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME RANGER
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Miner
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
-              </span>
+              <span className="font-bold ">Mine for stone, gold and more </span>
             </p>
-            <img src={az3} className="w-28 " />
+            <img src={az3} className="w-36 " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer   ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME KEEPER
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Engineer
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
+              <span className="font-bold ">
+                Become an expert in electronics
               </span>
             </p>
-            <img src={az4} className="w-28 " />
+            <img src={az4} className="w-36 " />
           </div>
         </div>
-        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col gap-5 rounded-xl p-5 border-double border-4 border-pink-600  ">
+        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col  gap-5 rounded-xl p-5 border-double border-4 border-white  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
             <p className="font-bold text-2xl"> Jobs</p>
-            <p className="text-md">
-              Explore many of the available jobs to start with!
-            </p>
+            <p className="text-md">Easy job, Easy money</p>
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer   ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME COP
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Electricity
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Los Santos Police Department
-              </span>
+              <span className="font-bold ">Fix or steal its up to you</span>
             </p>
-            <img src={job1} className="w-28 " />
+            <img src={job1} className="w-40 " />
           </div>
-          <div className="h-[120px] flex items-center  group hover:cursor-pointer   ">
+          <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-pink-600 duration-200 group-hover:bg-white  group-hover:text-pink-600 w-fit py-1 px-2 rounded-md font-semibold">
-                BECOME EMS & RDT
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+                Pool Cleaner
               </span>
-              <span className="font-bold group-hover:text-pink-600">
-                Emergency Medical Services
+              <span className="font-bold ">
+                Clean pools using our tremendous new animations
               </span>
             </p>
-            <img src={job2} className="w-28 " />
+            <img src={job2} className="w-40 " />
           </div>
         </div>
       </div>

@@ -18,22 +18,21 @@ const Navbar = () => {
     <div className="w-full h-full relative flex justify-center items-center  ">
       <video
         src={
-          "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1726865005/gta_e5kcac.mp4"
+          "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727220400/Gray_Red_Bold_History_YouTube_Thumbnail_3_ag3yta.mp4"
         }
         autoPlay
         loop
         muted
-        className=" max-lg:hidden w-full  grayscale brightness-50 "
+        className=" max-lg:hidden w-full   "
       />
-      {/* <div className="bg-[#161616cc] h-full w-full absolute top-0 max-lg:hidden"></div> */}
       <div className="flex justify-around text-white w-full font-Poppins top-0 px-5 absolute mt-6 max-lg:hidden">
         <div className="flex gap-9 max-lg:gap-0 text-white   ">
           <Link to="/#" className=" text-4xl flex  gap-1 font-bold  ">
             <div className="group lg:hover:scale-125 duration-500  ">
-              <span className="text-pink-600 text-5xl group-hover:[text-shadow:0px_0px_20px_rgba(219,39,119,1)] group-hover:brightness-125 ">
+              <span className="text-white text-5xl group-hover:[text-shadow:0px_0px_40px_rgba(255,255,255,1)] group-hover:brightness-200 ">
                 P
               </span>
-              <span className="group-hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] text-4xl group-hover:brightness-125">
+              <span className="group-hover:[text-shadow:0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200">
                 rime
               </span>
             </div>
@@ -47,7 +46,10 @@ const Navbar = () => {
           <Link className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
             HOME
           </Link>
-          <Link className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  ">
+          <Link
+            to="/joinus"
+            className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+          >
             HOW TO JOIN
           </Link>
           <Link className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  ">
@@ -83,11 +85,12 @@ const Navbar = () => {
       </div>
 
       <Link
-        to="/"
-        className=" absolute flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-125 border-pink-600 border-2 hover:bg-pink-600 hover:shadow-[0px_0px_100px] hover:shadow-pink-600  max-lg:hidden  "
+        target="_blank"
+        to="https://youtu.be/sk9slehg6Rc?si=qP6i1yfv5_2QqB6Q "
+        className=" group absolute top-[60%] flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-white border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white  max-lg:hidden  "
       >
-        <FaPlayCircle className="text-5xl text-white sm:text-3xl  " />
-        <button className="text-white font-Poppins font-bold text-xl    ">
+        <FaPlayCircle className="text-5xl text-white sm:text-3xl group-hover:text-black " />
+        <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black   ">
           Watch Trailer
         </button>
       </Link>

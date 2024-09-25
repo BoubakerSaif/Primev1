@@ -92,7 +92,7 @@ const Hero = () => {
 
             <Link
               to="/#"
-              className=" text-white flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-125 border-pink-600 border-2 hover:bg-pink-600 hover:shadow-[0px_0px_50px] hover:shadow-pink-600 "
+              className=" text-white flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-125 border-pink-600 border-2 hover:bg-pink-600 hover:shadow-[0px_0px_50px] hover:shadow-white "
             >
               <FaPlayCircle className="text-5xl  " />
               <button className="text white font-Poppins font-bold text-2xl   ">
@@ -103,11 +103,15 @@ const Hero = () => {
         </div>
       </div>
       <div className="lg:flex justify-center  max-lg:hidden w-auto text-white relative">
-        <img
+        {/* <img
           src={business}
           className={`w-full h-full ${neon}  ${
             neon === "grayscale" ? "brightness-50 " : ""
           }  `}
+        /> */}
+        <img
+          src={business}
+          className={`w-full h-full grayscale brightness-50`}
         />
 
         <main className=" flex xl:gap-32 lg:gap-14 absolute lg:mt-8 xl:mt-[60px] 2xl:mt-24   ">
@@ -119,7 +123,7 @@ const Hero = () => {
                   neon == "grayscale-0" ? "scale-110" : ""
                 }${
                   neon == "grayscale-0"
-                    ? " shadow-[0px_0px_50px] shadow-pink-600"
+                    ? " shadow-[0px_0px_20px] shadow-white"
                     : ""
                 } `}
               />
@@ -139,7 +143,7 @@ const Hero = () => {
                   neon == "grayscale-0" ? "scale-110" : ""
                 } ${
                   neon == "grayscale-0"
-                    ? " shadow-[0px_0px_50px] shadow-pink-600"
+                    ? " shadow-[0px_0px_20px] shadow-white"
                     : ""
                 } `}
               />
@@ -161,7 +165,7 @@ const Hero = () => {
                   neon == "grayscale-0" ? "scale-110" : ""
                 } ${
                   neon == "grayscale-0"
-                    ? " shadow-[0px_0px_50px] shadow-pink-600"
+                    ? " shadow-[0px_0px_20px] shadow-white"
                     : ""
                 }`}
               />
@@ -182,10 +186,10 @@ const Hero = () => {
               onMouseLeave={() => {
                 setNeon("grayscale");
               }}
-              className="flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-125 border-pink-600 border-2 hover:bg-pink-600 hover:shadow-[0px_0px_50px] hover:shadow-pink-600 "
+              className=" group flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-125 border-white border-2 hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white "
             >
-              <FaPlayCircle className="text-5xl  " />
-              <button className="text white font-Poppins font-bold text-2xl   ">
+              <FaPlayCircle className="text-4xl group-hover:text-black  " />
+              <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black   ">
                 START NOW
               </button>
             </Link>
@@ -196,7 +200,7 @@ const Hero = () => {
                   neon == "grayscale-0" ? "scale-110" : ""
                 } ${
                   neon == "grayscale-0"
-                    ? " shadow-[0px_0px_50px] shadow-pink-600"
+                    ? " shadow-[0px_0px_20px] shadow-white"
                     : ""
                 }`}
               />
@@ -218,7 +222,7 @@ const Hero = () => {
                   neon == "grayscale-0" ? "scale-110" : ""
                 } ${
                   neon == "grayscale-0"
-                    ? " shadow-[0px_0px_50px] shadow-pink-600"
+                    ? " shadow-[0px_0px_20px] shadow-white"
                     : ""
                 }`}
               />
@@ -238,7 +242,7 @@ const Hero = () => {
                   neon == "grayscale-0" ? "scale-110" : ""
                 } ${
                   neon == "grayscale-0"
-                    ? " shadow-[0px_0px_50px] shadow-pink-600"
+                    ? " shadow-[0px_0px_20px] shadow-white"
                     : ""
                 }`}
               />

@@ -10,11 +10,13 @@ import "./index.css";
 import Home from "./Pages/Home.jsx";
 import { Provider } from "react-redux";
 import store from "./Redux/store.js";
+import How from "./Pages/How.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Home />} />
+      <Route path="/joinus" element={<How />} />
     </Route>
   )
 );

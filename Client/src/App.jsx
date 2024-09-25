@@ -16,7 +16,6 @@ const App = () => {
 
   return (
     <div className="relative">
-      <Navbar />
       <Toaster position="top-right" />
       <Outlet />
       <SpeedInsights />

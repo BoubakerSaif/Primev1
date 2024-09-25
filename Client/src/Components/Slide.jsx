@@ -67,14 +67,14 @@ const Slide = () => {
         <p className="absolute top-[92%] max-md:top-[290px] font-Poppins text-sm  ">
           {texts[currentIndex].text}
         </p>
-        <div className="absolute top-[50%] w-fit left-1 rounded-full p-2 bg-black/20 text-white hover:text-pink-600 cursor-pointer hover:shadow-pink-600 hover:shadow-[0px_0px_30px] duration-300 ">
+        <div className="absolute top-[50%] w-fit left-1 rounded-full p-2 bg-black/20 text-white hover:text-white cursor-pointer hover:shadow-white hover:shadow-[0px_0px_30px] duration-300 ">
           <IoIosArrowBack
             size={40}
             onClick={prevSlide}
             className="duration-500"
           />
         </div>
-        <div className="absolute top-[50%] right-1  w-fit rounded-full p-2 bg-black/20 text-white cursor-pointer hover:text-pink-600  hover:shadow-pink-600 hover:shadow-[0px_0px_30px] duration-300">
+        <div className="absolute top-[50%] right-1  w-fit rounded-full p-2 bg-black/20 text-white cursor-pointer hover:text-white  hover:shadow-white hover:shadow-[0px_0px_30px] duration-300">
           <IoIosArrowForward
             onClick={nextSlide}
             size={40}
@@ -92,7 +92,7 @@ const Slide = () => {
           </p>
         </div>
 
-        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] border-[1px] border-pink-600 rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
+        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] border-[1px] border-white rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
           <img src={gtalogo} className="w-28" />
           <div className="font-Poppins text-sm">
             <p>Buy Grand Theft Auto V.</p>
@@ -101,13 +101,13 @@ const Slide = () => {
           <Link
             target="_blank"
             to={"https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/"}
-            className="flex gap-2 items-center px-8 py-1 bg-pink-700 brightness-125 rounded-md  w-44 justify-center  "
+            className="flex gap-2 items-center px-8 py-1 bg-white brightness-125 rounded-md  w-44 justify-center  "
           >
-            <FaShoppingCart />
-            <p>Buy</p>
+            <FaShoppingCart className="text-black" />
+            <p className="text-black font-bold">Buy</p>
           </Link>
         </div>
-        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] p-3  border-[1px] border-pink-600 rounded-md max-md:w-[500px]    ">
+        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] p-3  border-[1px] border-white rounded-md max-md:w-[500px]    ">
           <img src={fivemlogo} className="w-28 h-12" />
           <div className="font-Poppins text-sm">
             <p>Download FiveM Launcher</p>
@@ -116,15 +116,15 @@ const Slide = () => {
           <Link
             to={"https://fivem.net/"}
             target="_blank"
-            className="flex gap-2 items-center px-8 py-1 bg-pink-700 brightness-125 rounded-md w-44 justify-center "
+            className="flex gap-2 items-center px-8 py-1 bg-white brightness-125 rounded-md w-44 justify-center "
           >
-            <IoMdDownload />
-            <p>Download</p>
+            <IoMdDownload className="text-black" />
+            <p className="text-black font-bold">Download</p>
           </Link>
         </div>
         <p className=" text-slate-300 flex items-center gap-2 font-Poppins mb-9  ">
           Any questions or issues? Let us help you
-          <span className="flex items-center justify-center gap-1 text-white brightness-200 underline decoration-pink-800 decoration-2">
+          <span className="flex items-center justify-center gap-1 text-white brightness-200 underline decoration-white decoration-2">
             <IoMailOpenOutline className="text-2xl text-white mb-1 " /> Get in
             touch!
           </span>
