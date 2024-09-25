@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { IoPeopleSharp } from "react-icons/io5";
 import { FaPlayCircle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
-
+import { FaBars } from "react-icons/fa6";
+import { IoMdArrowDropup } from "react-icons/io";
 const Navbar = () => {
   const dispatch = useDispatch();
   const logout = (e) => {
@@ -14,6 +15,8 @@ const Navbar = () => {
   };
 
   const { userInfo } = useSelector((state) => state.auth);
+  const [show, setShow] = useState(false);
+
   return (
     <div className="w-full h-full relative flex justify-center items-center  ">
       <video
@@ -23,10 +26,28 @@ const Navbar = () => {
         autoPlay
         loop
         muted
-        className=" max-lg:hidden w-full   "
+        className="w-full   "
       />
-      <div className="flex justify-around text-white w-full font-Poppins top-0 px-5 absolute mt-6 max-lg:hidden">
-        <div className="flex gap-9 max-lg:gap-0 text-white   ">
+      <div className="flex justify-around text-white w-full font-Poppins top-0 px-5 absolute mt-6 ">
+        <div className="lg:hidden max-lg:block max-lg:mt-1">
+          {show && (
+            <IoMdArrowDropup
+              className="w-fit text-3xl  hover:border-2 hover:cursor-pointer rounded-md mt-1"
+              onClick={() => {
+                setShow(!show);
+              }}
+            />
+          )}
+          {show == false && (
+            <FaBars
+              className="w-fit text-3xl  hover:border-2 hover:cursor-pointer rounded-md mt-1"
+              onClick={() => {
+                setShow(!show);
+              }}
+            />
+          )}
+        </div>
+        <div className="flex gap-9 max-lg:gap-0 text-white    ">
           <Link to="/#" className=" text-4xl flex  gap-1 font-bold  ">
             <div className="group lg:hover:scale-125 duration-500  ">
               <span className="text-white text-5xl group-hover:[text-shadow:0px_0px_40px_rgba(255,255,255,1)] group-hover:brightness-200 ">
@@ -76,21 +97,33 @@ const Navbar = () => {
         ) : (
           <Link
             to={"http://localhost:5000/auth"}
-            className="mt-4 bg-indigo-600 p-2 rounded-md  font-medium h-fit hover:shadow-[0px_0px_30px_rgba(48,63,159,1.000)] duration-300 flex gap-1 items-center hover:scale-110"
+            className="mt-3 max-lg:mt-2 bg-indigo-600 p-2 rounded-md  font-medium h-fit hover:shadow-[0px_0px_30px_rgba(48,63,159,1.000)] duration-300 flex gap-1 items-center hover:scale-110"
           >
             <span>Login</span>
             <FaDiscord className="inline text-[20px]" />
           </Link>
         )}
       </div>
+      <div className="lg:hidden absolute sm:top-[30%] h-fit ">
+        {show && (
+          <div className="w-screen text-white text-center flex justify-center gap-4   items-center    text-sm font-semibold   ">
+            <Link className=" rounded-md bg-[##0e0e0f] w-fit  ">HOME</Link>
+            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">
+              HOW TO JOIN
+            </Link>
+            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">ABOUT US</Link>
+            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">CONTACT</Link>
+          </div>
+        )}
+      </div>
 
       <Link
         target="_blank"
         to="https://youtu.be/sk9slehg6Rc?si=qP6i1yfv5_2QqB6Q "
-        className=" group absolute top-[60%] flex items-center justify-around py-2 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-white border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white  max-lg:hidden  "
+        className=" group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-white border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white    "
       >
-        <FaPlayCircle className="text-5xl text-white sm:text-3xl group-hover:text-black " />
-        <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black   ">
+        <FaPlayCircle className="text-5xl  text-white sm:text-3xl group-hover:text-black " />
+        <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black max-lg:text-sm   ">
           Watch Trailer
         </button>
       </Link>

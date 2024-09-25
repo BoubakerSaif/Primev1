@@ -51,8 +51,8 @@ const FAQ = () => {
             <p className="text-[12px] text-slate-300 ">
               You can find a section with server rules, complaints about players
               and other topics on this
-              <span className="underline decoration-2 decoration-pink-700 font-bold  ">
-                {` Link`}
+              <span className="underline decoration-2 decoration-white font-semibold  ">
+                {`Link`}
               </span>
             </p>
           </div>
