@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagramSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaTiktok } from "react-icons/fa";
@@ -27,7 +27,11 @@ const Footer = () => {
         <p className="text-white font-Poppins text-sm font-semibold underline decoration-1 decoration-white underline-offset-2">
           Link & Ressources
         </p>
-        <Link className="text-gray-400 text-sm font-medium hover:translate-x-2 duration-300 w-fit">
+        <Link
+          target="_blank"
+          to="https://discord.gg/UJEgUBMBT8"
+          className="text-gray-400 text-sm font-medium hover:translate-x-2 duration-300 w-fit"
+        >
           <p>Discord</p>
         </Link>
         <Link className="text-gray-400 hover:translate-x-2 font-medium text-sm duration-300 w-fit ">
@@ -41,8 +45,8 @@ const Footer = () => {
         <Link className="text-gray-400 hover:translate-x-2 text-sm font-medium duration-300 w-fit">
           <p>Technical Support in Discord</p>
         </Link>
-        <Link className="text-gray-400 hover:translate-x-2 duration-300 w-fit text-sm font-medium  ">
-          <p>help@gta5majestic.com</p>
+        <Link className="text-gray-400 hover:translate-x-2 duration-300 w-fit font-medium text-[10px] ">
+          <p>primeroleplayteam@gmail.com</p>
         </Link>
       </div>
       <div className="h-[200px] w-[200px] flex flex-col  gap-2 mt-16 font-Poppins  ">
@@ -71,17 +75,33 @@ const Footer = () => {
           Follow us
         </p>
         <div className="flex gap-4 text-xl">
-          <Link className="w-fit">
+          <Link
+            to="https://x.com/primeroleplaytn"
+            target="_blank"
+            className="w-fit"
+          >
             <FaXTwitter className="text-white hover:brightness-200 hover:scale-110 duration-200 " />
           </Link>
-          <Link className="w-fit">
-            <FaInstagramSquare className="text-red-600 hover:brightness-200 hover:scale-110 duration-200" />
+          <Link
+            to="https://www.instagram.com/prime_roleplay_tn/"
+            target="_blank"
+            className="w-fit"
+          >
+            <FaInstagram className="text-white hover:brightness-200 hover:scale-110 duration-200" />
           </Link>
 
-          <Link className="w-fit">
-            <FaYoutube className="text-red-700 hover:brightness-200 hover:scale-110 duration-200 " />
+          <Link
+            to="https://www.youtube.com/@PrimeRoleplayTn"
+            target="_blank"
+            className="w-fit"
+          >
+            <FaYoutube className="text-white hover:brightness-200 hover:scale-110 duration-200 " />
           </Link>
-          <Link className="w-fit">
+          <Link
+            to="https://www.tiktok.com/@prime.roleplay.tn"
+            target="_blank"
+            className="w-fit"
+          >
             <FaTiktok className="text-white hover:brightness-200 hover:scale-110 duration-200 " />
           </Link>
         </div>

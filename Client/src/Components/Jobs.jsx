@@ -35,7 +35,7 @@ const Jobs = () => {
               <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
                 Become Warden
               </span>
-              <span className="font-bold ">Warden Branch</span>
+              <span className="font-medium ">Warden Branch</span>
             </p>
             <img src={warden} className="w-28   " />
           </div>
@@ -44,7 +44,7 @@ const Jobs = () => {
               <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
                 Become EMS & RDT
               </span>
-              <span className="font-bold ">Scientist federation</span>
+              <span className="font-medium ">Scientist federation</span>
             </p>
             <img src={ems} className="w-28   " />
           </div>
@@ -53,7 +53,7 @@ const Jobs = () => {
               <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
                 Become Ranger
               </span>
-              <span className="font-bold ">Ranger Legion</span>
+              <span className="font-medium ">Ranger Legion</span>
             </p>
             <img src={ranger} className="w-28  " />
           </div>
@@ -62,14 +62,14 @@ const Jobs = () => {
               <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
                 Become Keeper
               </span>
-              <span className="font-bold ">Wall Keepers Correction</span>
+              <span className="font-medium ">Wall Keepers Correction</span>
             </p>
             <img src={keepers} className="w-28  " />
           </div>
         </div>
         <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-white  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
-            <p className="font-bold text-2xl"> Businesses</p>
+            <p className="font-medium text-2xl"> Businesses</p>
             <p className="text-md">
               Dive into dozens of active and new businesses, strive in a high
               competitive atmoshpere
@@ -78,19 +78,19 @@ const Jobs = () => {
 
           <div className="h-[120px] justify-between flex items-center    group hover:cursor-pointer    ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
-                TABAC
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-4 rounded-md font-semibold">
+                Tabac
               </span>
-              <span className="font-bold ">Explore the world of TABAC </span>
+              <span className="font-medium ">Explore the world of TABAC </span>
             </p>
             <img src={az1} className="w-36 " />
           </div>
           <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white  w-fit py-1 px-2 rounded-md font-semibold">
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white  w-fit py-1 px-4 rounded-md font-semibold">
                 Logistics
               </span>
-              <span className="font-bold ">
+              <span className="font-medium ">
                 Different trucking and logistics businesses
               </span>
             </p>
@@ -98,19 +98,21 @@ const Jobs = () => {
           </div>
           <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-4 rounded-md font-semibold">
                 Miner
               </span>
-              <span className="font-bold ">Mine for stone, gold and more </span>
+              <span className="font-medium ">
+                Mine for stone, gold and more{" "}
+              </span>
             </p>
             <img src={az3} className="w-36 " />
           </div>
           <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-4 rounded-md font-semibold">
                 Engineer
               </span>
-              <span className="font-bold ">
+              <span className="font-medium ">
                 Become an expert in electronics
               </span>
             </p>
@@ -119,24 +121,24 @@ const Jobs = () => {
         </div>
         <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col  gap-5 rounded-xl p-5 border-double border-4 border-white  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
-            <p className="font-bold text-2xl"> Jobs</p>
+            <p className="font-medium text-2xl"> Jobs</p>
             <p className="text-md">Easy job, Easy money</p>
           </div>
           <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-3 rounded-md font-semibold">
                 Electricity
               </span>
-              <span className="font-bold ">Fix or steal its up to you</span>
+              <span className="font-medium ">Fix or steal its up to you</span>
             </p>
             <img src={job1} className="w-40 " />
           </div>
           <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">
             <p className="flex flex-col text-start gap-2  ">
-              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-2 rounded-md font-semibold">
+              <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-3 rounded-md font-semibold">
                 Pool Cleaner
               </span>
-              <span className="font-bold ">
+              <span className="font-medium ">
                 Clean pools using our tremendous new animations
               </span>
             </p>
