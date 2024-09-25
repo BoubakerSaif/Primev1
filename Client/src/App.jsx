@@ -7,6 +7,7 @@ import { loginUser } from "./Redux/userSlice";
 
 import "react-toastify/dist/ReactToastify.css";
 import toast, { Toaster } from "react-hot-toast";
+import Footer from "./Components/Footer";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -15,11 +16,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div>
       <Toaster position="top-right" />
-      <Navbar />
-
       <Outlet />
+      <Footer />
+
       <SpeedInsights />
     </div>
   );
