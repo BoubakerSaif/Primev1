@@ -17,7 +17,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className=" bg-[#010101] flex flex-col relative h-[140px] py-6 ">
+    <div className=" bg-[#010101] flex flex-col justify-center relative h-[100px]  ">
       <div
         className={`flex justify-around text-white w-full font-Poppins px-5 `}
       >
@@ -99,8 +99,10 @@ const Navbar = () => {
       <div className="lg:hidden  h-fit w-full absolute top-[75%]   ">
         {show && (
           <div className="text-white text-center flex justify-center gap-4 items-center text-sm font-semibold ">
-            <Link className=" rounded-md bg-[##0e0e0f] w-fit  ">HOME</Link>
-            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">
+            <Link to={"/"} className=" rounded-md bg-[##0e0e0f] w-fit  ">
+              HOME
+            </Link>
+            <Link to={"/joinus"} className=" rounded-lg bg-[##0e0e0f] w-fit  ">
               HOW TO JOIN
             </Link>
             <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">ABOUT US</Link>
