@@ -16,7 +16,7 @@ const Hero = () => {
     <div className=" text-white relative ">
       <img
         src={business}
-        className={`w-full h-screen  grayscale brightness-50`}
+        className={`w-full h-full  grayscale brightness-50`}
       />
       <div className="absolute top-0 flex items-center justify-center w-full h-screen  ">
         <main className=" flex items-center justify-center gap-28 max-lg:gap-10 max-lg:flex-col         ">
@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px]  text-center   ">
               <img
                 src={criminal}
-                className={` rounded-[80px] ${neon} group-hover:grayscale-0 group-hover:-translate-y-3 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
+                className={` rounded-full ${neon} group-hover:grayscale-0 group-hover:-translate-y-3 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
                   neon == "grayscale-0" ? "scale-105" : ""
                 }${
                   neon == "grayscale-0"
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center  ">
               <img
                 src={bsman}
-                className={` rounded-[80px] ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
+                className={` rounded-full ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
                   neon == "grayscale-0" ? "scale-105" : ""
                 } ${
                   neon == "grayscale-0"
@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center    ">
               <img
                 src={doctor}
-                className={` rounded-[80px] ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
+                className={` rounded-full ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
                   neon == "grayscale-0" ? "scale-105" : ""
                 } ${
                   neon == "grayscale-0"
@@ -101,7 +101,7 @@ const Hero = () => {
             <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center    ">
               <img
                 src={farmer}
-                className={` rounded-[80px] ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
+                className={` rounded-full ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
                   neon == "grayscale-0" ? "scale-105" : ""
                 } ${
                   neon == "grayscale-0"
@@ -123,7 +123,7 @@ const Hero = () => {
             <div className="group flex justify-center items-end  w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
               <img
                 src={governor}
-                className={` rounded-[80px] ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
+                className={` rounded-full ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
                   neon == "grayscale-0" ? "scale-105" : ""
                 } ${
                   neon == "grayscale-0"
@@ -143,7 +143,7 @@ const Hero = () => {
             <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
               <img
                 src={warden}
-                className={` rounded-[80px] ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
+                className={` rounded-full ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
                   neon == "grayscale-0" ? "scale-105" : ""
                 } ${
                   neon == "grayscale-0"

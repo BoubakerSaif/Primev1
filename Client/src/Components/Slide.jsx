@@ -1,18 +1,4 @@
 import React, { useState } from "react";
-import members from "../assets/images/3_st.png";
-import wall from "../assets/images/6.png";
-import deadisland from "../assets/images/dead_sandy.png";
-import keeper from "../assets/images/keeper.png";
-import warden from "../assets/images/warden_1.png";
-import smuggler from "../assets/images/smuggler.png";
-import scientist from "../assets/images/scientist.png";
-import metro from "../assets/images/metro.png";
-import dark from "../assets/images/olddark.jpg";
-import city3 from "../assets/images/city3.jpg";
-import los from "../assets/images/los.jpg";
-import herores from "../assets/images/herores.png";
-
-import view from "../assets/images/view.jpg";
 import gtalogo from "../assets/images/gtalogo.png";
 import fivemlogo from "../assets/images/fivemlogo.png";
 import { FaShoppingCart } from "react-icons/fa";

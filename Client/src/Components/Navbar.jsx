@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
 import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
+import primelogo from "../assets/images/primelogo.png";
 const Navbar = () => {
   const dispatch = useDispatch();
   const logout = (e) => {
@@ -48,6 +49,10 @@ const Navbar = () => {
               <span className="group-hover:[text-shadow:0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200">
                 rime
               </span>
+              {/* <img
+                src={primelogo}
+                className="w-14 group-hover:shadow-[0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200 rounded-full "
+              /> */}
             </div>
           </Link>
           <div className=" mt-3 ml-3 h-fit flex items-center gap-2 bg-black bg-opacity-30 p-1  rounded-lg">
