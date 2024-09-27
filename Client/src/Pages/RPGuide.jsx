@@ -233,11 +233,11 @@ const RPGuide = () => {
               <div className="flex flex-col gap-20">
                 <img
                   src={wall}
-                  className="max-2xl:w-[400px] w-[500px] rounded-3xl rotate-6 brightness-75  outline outline-offset-2 outline-white "
+                  className="max-2xl:w-[400px] w-[500px] rounded-3xl rotate-6 brightness-75  outline outline-offset-1 outline-[#3d3d3d] "
                 />
                 <img
                   src={metro}
-                  className="max-2xl:w-[400px] w-[500px] rounded-3xl -rotate-6 brightness-75  outline outline-offset-2 outline-white "
+                  className="max-2xl:w-[400px] w-[500px] rounded-3xl -rotate-6 brightness-75  outline outline-offset-1 outline-[#3d3d3d] "
                 />
               </div>
             </div>

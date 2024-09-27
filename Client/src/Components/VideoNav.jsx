@@ -131,7 +131,7 @@ const VideoNav = () => {
         to="https://youtu.be/sk9slehg6Rc?si=qP6i1yfv5_2QqB6Q "
         className={`${
           location.pathname == "/rpguide" ? "hidden" : ""
-        } group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-white border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white   `}
+        } group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-[#3d3d3d] border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white   `}
       >
         <FaPlayCircle className="text-5xl  text-white sm:text-3xl group-hover:text-black " />
         <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black max-lg:text-sm   ">

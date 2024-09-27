@@ -22,7 +22,7 @@ const Jobs = () => {
         <p className="text-5xl text-white">businesses and jobs</p>
       </div>
       <div className="flex justify-center gap-20 items-center  font-Poppins  max-2xl:flex-wrap  ">
-        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-white  ">
+        <div className=" bg-[#131313] h-[650px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-[#3d3d3d]  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
             <p className="font-bold text-2xl"> Government and Legal Factions</p>
             <p className="text-md">
@@ -67,9 +67,9 @@ const Jobs = () => {
             <img src={keepers} className="w-28  " />
           </div>
         </div>
-        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-white  ">
+        <div className=" bg-[#131313] h-[650px] w-[400px] flex flex-col justify-between rounded-xl p-5 border-double border-4 border-[#3d3d3d]  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
-            <p className="font-medium text-2xl"> Businesses</p>
+            <p className=" font-bold text-2xl"> Businesses</p>
             <p className="text-md">
               Dive into dozens of active and new businesses, strive in a high
               competitive atmoshpere
@@ -119,9 +119,9 @@ const Jobs = () => {
             <img src={az4} className="w-36 " />
           </div>
         </div>
-        <div className=" bg-[#131313] h-[700px] w-[400px] flex flex-col  gap-5 rounded-xl p-5 border-double border-4 border-white  ">
+        <div className=" bg-[#131313] h-[650px] w-[400px] flex flex-col  gap-5 rounded-xl p-5 border-double border-4 border-[#3d3d3d]  ">
           <div className="flex flex-col items-center justify-around h-[100px]  ">
-            <p className="font-medium text-2xl"> Jobs</p>
+            <p className="font-bold text-2xl"> Jobs</p>
             <p className="text-md">Easy job, Easy money</p>
           </div>
           <div className="h-[120px] justify-between flex items-center  group hover:cursor-pointer   ">

@@ -93,7 +93,7 @@ const Slide = () => {
           </p>
         </div>
 
-        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] border-[1px] border-white rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
+        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] border-[1px] border-[#3d3d3d] rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
           <img src={gtalogo} className="w-28" />
           <div className="font-Poppins text-sm">
             <p>Buy Grand Theft Auto V.</p>
@@ -108,7 +108,7 @@ const Slide = () => {
             <p className="text-black font-bold">Buy</p>
           </Link>
         </div>
-        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] p-3  border-[1px] border-white rounded-md max-md:w-[500px]    ">
+        <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] p-3 border-[1px] border-[#3d3d3d] rounded-md max-md:w-[500px]    ">
           <img src={fivemlogo} className="w-28 h-12" />
           <div className="font-Poppins text-sm">
             <p>Download FiveM Launcher</p>

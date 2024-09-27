@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="  bg-[#010101]  max-xl:h-screen max-xl:flex-wrap lg:flex-nowrap lg:h-[300px]  text-white  flex justify-center gap-2 items-center  ">
+    <div className="   bg-[#010101]  max-xl:h-screen max-xl:flex-wrap lg:flex-nowrap lg:h-[300px]  text-white  flex justify-center gap-2 items-center  ">
       <div className="h-[200px] w-[280px] flex flex-col mt-10 gap-2 font-Poppins   ">
         <p className="text-white font-Poppins text-xl font-bold">
           <span className="text-white text-2xl">P</span>rime
