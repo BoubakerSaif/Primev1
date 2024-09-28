@@ -8,7 +8,8 @@ import { logoutUser } from "../Redux/userSlice";
 import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
 import primelogo from "../assets/images/primelogo.png";
-
+import { delay, motion } from "framer-motion";
+import select from "../assets/sounds/select.mp3";
 const VideoNav = () => {
   const dispatch = useDispatch();
   const logout = (e) => {
@@ -19,6 +20,10 @@ const VideoNav = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
   const location = useLocation();
+
+  const menuselect = new Audio(
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727529567/select_bzty16.mp3"
+  );
 
   return (
     <div className="w-full h-full relative flex justify-center items-center bg-[#010101]  ">
@@ -65,7 +70,7 @@ const VideoNav = () => {
               </span>
               {/* <img
                 src={primelogo}
-                className="w-14 group-hover:shadow-[0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200 rounded-full "
+                className="w-16 group-hover:shadow-[0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200 rounded-full "
               /> */}
             </div>
           </Link>
@@ -76,21 +81,37 @@ const VideoNav = () => {
         </div>
         <div className="flex justify-between gap-10  mr-48 lg:mr-0 font-medium cursor-pointer h-fit max-lg:hidden text-base mt-4 ">
           <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
             to={"/"}
             className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
           >
             HOME
           </Link>
           <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
             to="/joinus"
             className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
           >
             HOW TO JOIN
           </Link>
-          <Link className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  ">
+          <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
+            className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+          >
             ABOUT US
           </Link>
-          <Link className="  text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
+          <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
+            className="  text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
+          >
             CONTACT
           </Link>
         </div>

@@ -11,12 +11,12 @@ import job1 from "../assets/images/Jobs/job_1.png";
 import job2 from "../assets/images/Jobs/job_2.png";
 const Jobs = () => {
   return (
-    <div className=" w-full 2xl:h-screen bg-[#010101] text-white  flex flex-col items-center justify-around text-center max-2xl:gap-20    ">
-      <div className=" w-full font-Poppins  font-bold max-2xl:mt-24">
+    <div className=" w-full 2xl:h-screen bg-[#010101] text-white  flex flex-col items-center gap-14 text-center max-2xl:gap-20    ">
+      <div className=" w-full font-Poppins   font-bold max-2xl:mt-24">
         <p className="text-gray-500 uppercase  text-2xl">
           what we give players
         </p>
-        <p className="text-5xl">
+        <p className="text-5xl mt-3">
           Our world of <span className="text-white">factions,</span>
         </p>
         <p className="text-5xl text-white">businesses and jobs</p>
@@ -119,8 +119,8 @@ const Jobs = () => {
             <img src={az4} className="w-36 " />
           </div>
         </div>
-        <div className=" bg-[#131313] h-[650px] w-[400px] flex flex-col  gap-5 rounded-xl p-5 border-double border-4 border-[#3d3d3d]  ">
-          <div className="flex flex-col items-center justify-around h-[100px]  ">
+        <div className=" bg-[#131313] h-[650px] w-[400px] flex flex-col   rounded-xl p-5 border-double border-4 border-[#3d3d3d]  ">
+          <div className="flex flex-col items-center gap-4  h-[100px]  ">
             <p className="font-bold text-2xl"> Jobs</p>
             <p className="text-md">Easy job, Easy money</p>
           </div>

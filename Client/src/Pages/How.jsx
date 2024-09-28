@@ -14,18 +14,19 @@ import Cat1 from "../Components/Whitelist/Cat1";
 import Cat2 from "../Components/Whitelist/Cat2";
 import Cat3 from "../Components/Whitelist/Cat3";
 import { Cat4 } from "../Components/Whitelist/Cat4";
+import Cat5 from "../Components/Whitelist/Cat5";
 
 Step3;
 const How = () => {
   const [step, setStep] = useState("step1");
   const [cat, setCat] = useState("");
   const { userInfo } = useSelector((state) => state.auth);
-
+  console.log(cat);
   return (
     <>
       <Navbar />
       <main className="bg-[#010101] flex items-center text-white font-Poppins flex-col gap-12">
-        <div className="flex h-fit gap-16 mt-10">
+        <div className="flex h-fit gap-16 mt-4">
           <div
             onClick={() => {
               setStep("step1");
@@ -152,6 +153,14 @@ const How = () => {
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
           <Cat4 setCat={setCat} setStep={setStep} />
+        ) : (
+          ""
+        )}
+        {step == "step5" &&
+        cat == "cat5" &&
+        userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
+          .length == 1 ? (
+          <Cat5 setCat={setCat} setStep={setStep} cat={cat} />
         ) : (
           ""
         )}

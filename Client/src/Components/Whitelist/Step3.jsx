@@ -4,7 +4,7 @@ import white from "../../assets/images/white.png";
 
 const Step3 = ({ setStep }) => {
   return (
-    <div className="text-white flex items-start justify-around h-[400px] w-[700px] mt-12 ">
+    <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
       <img src={white} className="w-36  " />
       <div className="flex flex-col items-center  h-32 w-96 justify-around gap-3 ">
         <h1 className="font-bold text-2xl">
