@@ -21,7 +21,14 @@ const How = () => {
   const [step, setStep] = useState("step1");
   const [cat, setCat] = useState("");
   const { userInfo } = useSelector((state) => state.auth);
-  console.log(cat);
+  const [whiteList, setWhiteList] = useState({
+    name: "",
+    discordId: "",
+    age: "",
+    timezone: "",
+    hearAboutUs: "",
+    prevRpExp: "",
+  });
   return (
     <div>
       <Navbar />
@@ -128,7 +135,12 @@ const How = () => {
         cat == "cat1" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Cat1 setCat={setCat} setStep={setStep} />
+          <Cat1
+            setCat={setCat}
+            setStep={setStep}
+            whiteList={whiteList}
+            setWhiteList={setWhiteList}
+          />
         ) : (
           ""
         )}
