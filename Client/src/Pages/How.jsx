@@ -23,7 +23,7 @@ const How = () => {
   const { userInfo } = useSelector((state) => state.auth);
   console.log(cat);
   return (
-    <>
+    <div>
       <Navbar />
       <main className="bg-[#010101] flex items-center text-white font-Poppins flex-col gap-12">
         <div className="flex h-fit gap-16 mt-4">
@@ -165,7 +165,7 @@ const How = () => {
           ""
         )}
       </main>
-    </>
+    </div>
   );
 };
 

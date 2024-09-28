@@ -2,7 +2,7 @@ import React from "react";
 
 export const Cat4 = ({ setCat, setStep }) => {
   return (
-    <div className=" h-auto w-[900px] ">
+    <div className=" h-auto w-[900px] max-lg:w-[640px] ">
       <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
         Fourth Category : RP Knowledge Base 3
       </h1>
