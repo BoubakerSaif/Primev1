@@ -28,12 +28,29 @@ const How = () => {
     timezone: "",
     hearAboutUs: "",
     prevRpExp: "",
+    charName: "",
+    charEth: "",
+    charBack: "",
+    reason: "",
+    charSkills: "",
+    charReaction: "",
+    sceneOne: "",
+    sceneTwo: "",
+    sceneThree: "",
+    sceneFour: "",
+    sceneFive: "",
+    charLongTermGoals: "",
+    potCharDev: "",
+    existStrat: "",
+    obeyLaw: "",
+    breakLow: "",
   });
+  console.log(whiteList);
   return (
     <div>
       <Navbar />
       <main className="bg-[#010101] flex items-center text-white font-Poppins flex-col gap-12">
-        <div className="flex h-fit gap-16 mt-4">
+        <div className="flex h-fit gap-16 mt-2">
           <div
             onClick={() => {
               setStep("step1");
@@ -148,7 +165,12 @@ const How = () => {
         cat == "cat2" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Cat2 setCat={setCat} setStep={setStep} />
+          <Cat2
+            setCat={setCat}
+            setStep={setStep}
+            whiteList={whiteList}
+            setWhiteList={setWhiteList}
+          />
         ) : (
           ""
         )}
@@ -156,7 +178,12 @@ const How = () => {
         cat == "cat3" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Cat3 setCat={setCat} setStep={setStep} />
+          <Cat3
+            setCat={setCat}
+            setStep={setStep}
+            whiteList={whiteList}
+            setWhiteList={setWhiteList}
+          />
         ) : (
           ""
         )}
@@ -164,7 +191,12 @@ const How = () => {
         cat == "cat4" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Cat4 setCat={setCat} setStep={setStep} />
+          <Cat4
+            setCat={setCat}
+            setStep={setStep}
+            whiteList={whiteList}
+            setWhiteList={setWhiteList}
+          />
         ) : (
           ""
         )}
@@ -172,7 +204,13 @@ const How = () => {
         cat == "cat5" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Cat5 setCat={setCat} setStep={setStep} cat={cat} />
+          <Cat5
+            setCat={setCat}
+            setStep={setStep}
+            cat={cat}
+            whiteList={whiteList}
+            setWhiteList={setWhiteList}
+          />
         ) : (
           ""
         )}

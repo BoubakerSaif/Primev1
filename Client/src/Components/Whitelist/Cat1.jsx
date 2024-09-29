@@ -4,7 +4,6 @@ const Cat1 = ({ setCat, setStep, whiteList, setWhiteList }) => {
   const onChangeHandler = (e) => {
     setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
   };
-  console.log(whiteList);
   return (
     <div className=" max-lg:w-[640px]  w-[900px] ">
       <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">

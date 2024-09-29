@@ -1,6 +1,9 @@
 import React from "react";
 
-export const Cat4 = ({ setCat, setStep }) => {
+export const Cat4 = ({ setCat, setStep, whiteList, setWhiteList }) => {
+  const onChangeHandler = (e) => {
+    setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
+  };
   return (
     <div className=" h-auto w-[900px] max-lg:w-[640px] ">
       <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
@@ -12,9 +15,12 @@ export const Cat4 = ({ setCat, setStep }) => {
             Character’s Long-Term Goals
           </label>
           <textarea
+            onChange={onChangeHandler}
             className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-44 text-sm"
             type="text"
             placeholder="What are your character’s long-term goals in the city?"
+            name="charLongTermGoals"
+            value={whiteList.charLongTermGoals}
           ></textarea>
         </div>
         <div className="flex flex-col gap-2 ">
@@ -22,9 +28,12 @@ export const Cat4 = ({ setCat, setStep }) => {
             Potential Character Development
           </label>
           <textarea
+            onChange={onChangeHandler}
             className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-44 text-sm"
             type="text"
             placeholder="How do you see your character evolving after 3 months of roleplay"
+            name="potCharDev"
+            value={whiteList.potCharDev}
           ></textarea>
         </div>
         <div className="flex flex-col gap-2 ">
@@ -32,9 +41,12 @@ export const Cat4 = ({ setCat, setStep }) => {
             Exit Strategy
           </label>
           <textarea
+            onChange={onChangeHandler}
             className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-44 text-sm"
             type="text"
             placeholder="If your character were to leave the city or die, how would you roleplay their exit? (Assesses commitment to the roleplay and creative handling of character endings)"
+            name="existStrat"
+            value={whiteList.existStrat}
           ></textarea>
         </div>
 
@@ -46,7 +58,7 @@ export const Cat4 = ({ setCat, setStep }) => {
                 setStep("step5");
                 window.scrollTo(0, 0);
               }}
-              className="text-center  font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
+              className="text-center font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
             >
               Next
             </button>

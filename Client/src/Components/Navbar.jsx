@@ -13,7 +13,9 @@ const Navbar = () => {
     e.preventDefault();
     dispatch(logoutUser());
   };
-
+  const menuselect = new Audio(
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727529567/select_bzty16.mp3"
+  );
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
 
@@ -62,21 +64,37 @@ const Navbar = () => {
         </div>
         <div className="flex justify-between gap-10  mr-48 lg:mr-0 font-medium cursor-pointer h-fit max-lg:hidden text-base mt-4 ">
           <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
             to="/"
             className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
           >
             HOME
           </Link>
           <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
             to="/joinus"
             className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
           >
             HOW TO JOIN
           </Link>
-          <Link className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  ">
+          <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
+            className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+          >
             ABOUT US
           </Link>
-          <Link className="  text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
+          <Link
+            onMouseEnter={() => {
+              menuselect.play();
+            }}
+            className="  text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
+          >
             CONTACT
           </Link>
         </div>

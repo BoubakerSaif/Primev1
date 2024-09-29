@@ -7,9 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
 import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
-import primelogo from "../assets/images/primelogo.png";
-import { delay, motion } from "framer-motion";
-import select from "../assets/sounds/select.mp3";
+
 const VideoNav = () => {
   const dispatch = useDispatch();
   const logout = (e) => {

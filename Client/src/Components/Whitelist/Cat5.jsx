@@ -3,8 +3,11 @@ import { useEffect, useState } from "react";
 import npc from "../../assets/images/npc.png";
 import legit from "../../assets/images/3_st.png";
 import criminal from "../../assets/images/criminal.png";
-
-const Cat5 = ({ setCat, setStep, cat }) => {
+import { IoReturnUpBackOutline } from "react-icons/io5";
+const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
+  const onChangeHandler = (e) => {
+    setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
+  };
   const animations = {
     initial: { opacity: 0, x: 0 },
     animate: { opacity: 1, x: 0 },
@@ -41,11 +44,14 @@ const Cat5 = ({ setCat, setStep, cat }) => {
         transition={{ ease: [0, 0.71, 0.2, 1.01], duration: 5 }}
         className=" h-auto   "
       >
-        <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
-          {choice == "final"
-            ? "General Rules Confirmation and Submission"
-            : "Fifth Category : Forge Your Path"}
-        </h1>
+        <div className="flex justify-center items-center">
+          <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit  px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
+            {choice == "final"
+              ? "General Rules Confirmation and Submission"
+              : "Fifth Category : Forge Your Path"}
+          </h1>
+        </div>
+
         {choice == "nothing" && (
           <>
             <motion.img
@@ -82,7 +88,7 @@ const Cat5 = ({ setCat, setStep, cat }) => {
                   and seek your fortune in the shadows.
                 </motion.span>
                 <motion.span
-                  className="block mt-5"
+                  className="block mt-1"
                   initial={{ opacity: !firstTry ? 1 : 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: !firstTry ? 0 : 22 }}
@@ -93,14 +99,14 @@ const Cat5 = ({ setCat, setStep, cat }) => {
                   initial={{ opacity: !firstTry ? 1 : 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: !firstTry ? 0 : 24 }}
-                  className="mx-auto mt-2 flex justify-center gap-8  "
+                  className="mx-auto mt-2 flex justify-center gap-3 items-center  "
                 >
                   <button
                     onClick={() => {
                       setChoice("obey");
                       setFirstTry(false);
                     }}
-                    className="bg-[#e81c5a] px-4 py-1 rounded-md  hover:shadow-[#e81c5a] hover:shadow-[0px_0px_30px] "
+                    className="bg-[#e81c5a] px-4 py-[2px] rounded-md  hover:shadow-[#e81c5a] hover:shadow-[0px_0px_30px] "
                   >
                     Obey The Law
                   </button>
@@ -109,11 +115,23 @@ const Cat5 = ({ setCat, setStep, cat }) => {
                       setChoice("break");
                       setFirstTry(false);
                     }}
-                    className="bg-[#e81c5a] px-4 py-1 rounded-md  hover:shadow-[#e81c5a] hover:shadow-[0px_0px_30px] "
+                    className="bg-[#e81c5a] px-4 py-[2px] rounded-md  hover:shadow-[#e81c5a] hover:shadow-[0px_0px_30px] "
                   >
                     Break The Law
                   </button>
                 </motion.div>
+                <motion.button
+                  initial={{ opacity: !firstTry ? 1 : 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: !firstTry ? 0 : 28 }}
+                  onClick={() => {
+                    setCat("cat4");
+                    setStep("step5");
+                  }}
+                  className=" mx-auto bg-[white] px-3 text-black font-semibold rounded-md mt-4"
+                >
+                  Go back
+                </motion.button>
               </p>
             </motion.div>
           </>
@@ -130,9 +148,12 @@ const Cat5 = ({ setCat, setStep, cat }) => {
                     A star in the dust
                   </label>
                   <textarea
+                    onChange={onChangeHandler}
                     className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-60 "
                     type="text"
                     placeholder="What is the most creative scene you can imagine involving buying a company?"
+                    name="obeyLaw"
+                    value={whiteList.obeyLaw}
                   ></textarea>
                 </div>
               </form>
@@ -176,10 +197,14 @@ const Cat5 = ({ setCat, setStep, cat }) => {
                   <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer ">
                     A star in the dust
                   </label>
+
                   <textarea
+                    onChange={onChangeHandler}
                     className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-60 "
                     type="text"
                     placeholder="What is the most creative scene you can imagine involving buying a company?"
+                    name="breakLow"
+                    value={whiteList.breakLow}
                   ></textarea>
                 </div>
               </form>

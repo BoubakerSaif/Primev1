@@ -42,8 +42,8 @@ const Slide = () => {
   };
 
   return (
-    <div className="  text-white max-2xl:h-screen 2xl:h-[600px] w-full bg-[#010101] flex justify-around items-center max-2xl:flex-col max-2xl:gap-24 max-xl:justify-between    ">
-      <div className="relative lg:mt-16  ">
+    <div className="  text-white h-screen 2xl:h-[600px] w-full bg-[#010101] flex justify-around items-center max-2xl:flex-col max-2xl:gap-24 max-xl:justify-between     ">
+      <div className="relative    ">
         <img
           src={slides[currentIndex]}
           className="h-[400px] max-md:h-[250px] "

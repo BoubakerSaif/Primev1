@@ -17,12 +17,12 @@ const Hero = () => {
     <div className=" text-white relative ">
       <img
         src={business}
-        className={`w-full h-full  grayscale brightness-50`}
+        className={`w-full 2xl:h-full h-screen  grayscale brightness-50`}
       />
-      <div className="absolute top-[3%] flex items-center justify-center w-full h-screen  ">
-        <main className=" flex items-center justify-center gap-28 max-lg:gap-10 max-lg:flex-col         ">
+      <div className="absolute top-[0] flex items-center justify-center w-full h-screen  ">
+        <main className=" flex items-center justify-center gap-28 max-lg:gap-10 max-lg:flex-col">
           <div className="flex lg:flex-col items-center gap-16  ">
-            <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px]  text-center   ">
+            <div className="group flex justify-center items-end w-[300px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
               <img
                 src={criminal}
                 className={` rounded-3xl ${neon} group-hover:grayscale-0 group-hover:-translate-y-3 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
@@ -42,7 +42,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-            <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center  ">
+            <div className="group flex justify-center items-end w-[300px] max-xl:w-[250px] max-lg:w-[200px] text-center  ">
               <img
                 src={bsman}
                 className={` rounded-3xl ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex lg:flex-col items-center gap-16 ">
-            <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center    ">
+            <div className="group flex justify-center items-end w-[300px] max-xl:w-[250px] max-lg:w-[200px] text-center    ">
               <img
                 src={doctor}
                 className={` rounded-3xl ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
@@ -99,7 +99,7 @@ const Hero = () => {
                 START NOW
               </button>
             </Link>
-            <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center    ">
+            <div className="group flex justify-center items-end w-[300px] max-xl:w-[250px] max-lg:w-[200px] text-center    ">
               <img
                 src={farmer}
                 className={` rounded-3xl ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
@@ -121,7 +121,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex lg:flex-col items-center gap-16 ">
-            <div className="group flex justify-center items-end  w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
+            <div className="group flex justify-center items-end  w-[300px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
               <img
                 src={governor}
                 className={` rounded-3xl ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
@@ -141,7 +141,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-            <div className="group flex justify-center items-end w-[330px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
+            <div className="group flex justify-center items-end w-[300px] max-xl:w-[250px] max-lg:w-[200px] text-center   ">
               <img
                 src={warden}
                 className={` rounded-3xl ${neon} group-hover:grayscale-0 group-hover:-translate-y-2 duration-700  group-hover:scale-100 cursor-pointer group-hover:brightness-125 ${
