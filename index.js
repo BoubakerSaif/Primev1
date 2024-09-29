@@ -6,9 +6,9 @@ import connectDB from "./Config/DB.js";
 import userRoutes from "./Routes/userRotues.js";
 import axios from "axios";
 import User from "./Models/userModel.js";
-import { protect } from "./Middlewares/authMiddleWare.js";
 import jwt from "jsonwebtoken";
-import { loginUser } from "./Controllers/userControllers.js";
+import whiteListRoutes from "./Routes/whiteListRoutes.js";
+
 const app = express();
 dotenv.config();
 connectDB();
@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use("/auth", userRoutes);
+app.use("/whiteApp", whiteListRoutes);
 app.get("/auth", async (req, res) => {
   const url =
     "https://discord.com/oauth2/authorize?client_id=1287395955183718512&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fredirect&scope=identify+guilds+email";

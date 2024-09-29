@@ -5,14 +5,6 @@ const loginUser = asyncHandler(async (req, res) => {
   try {
     const user = await User.findById(req?.User?._id);
     res.status(200).json(user);
-    // if (user?.guilds?.filter((el) => el.id == "1273036528196653077")) {
-
-    // }
-    // else {
-    //   res.json({
-    //     message: "You are not a member of our Prime RolePlay Discord",
-    //   });
-    // }
   } catch (error) {
     throw new Error(error);
   }
