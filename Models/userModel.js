@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema(
     email: { type: String, unique: true },
     verified: { type: Boolean },
     guilds: [{}],
+    whiteListStatus: { type: String, default: "noApp" },
     WhiteListed: { type: Boolean, default: false },
     role: { type: String, default: "User" },
   },

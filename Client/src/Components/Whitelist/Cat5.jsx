@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import npc from "../../assets/images/npc.png";
 import legit from "../../assets/images/3_st.png";
 import criminal from "../../assets/images/criminal.png";
+import { useDispatch } from "react-redux";
+import { createWhiteList } from "../../Redux/whiteListSlice";
 const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
   const animations = {
     initial: { opacity: 0, x: 0 },
@@ -16,6 +18,11 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
   );
   const [choice, setChoice] = useState("nothing");
   const [firstTry, setFirstTry] = useState(true);
+  const dispatch = useDispatch();
+  const createApp = (e) => {
+    e.preventDefault();
+    dispatch(createWhiteList(whiteList));
+  };
 
   useEffect(() => {
     if (cat == "cat5") {
@@ -158,12 +165,11 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
               </form>
               <div className=" flex justify-end gap-5 ">
                 <button
-                  onClick={() => {
-                    setConfirm("final");
-                  }}
+                  onClick={createApp}
+                  type="submit"
                   className="text-center font-Poppins font-semibold bg-[#e81c5a] w-fit  px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
                 >
-                  Next
+                  Confirm WhiteList
                 </button>
                 <button
                   onClick={() => {
@@ -192,7 +198,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
               <h1 className="text-start px-4">
                 I don’t trust this place. I’ll make my own rules.
               </h1>
-              <form>
+              <form onSubmit={createApp}>
                 <div className="flex flex-col gap-2 ">
                   <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer ">
                     A star in the dust
@@ -211,9 +217,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
               </form>
               <div className=" flex justify-end gap-5 ">
                 <button
-                  onClick={() => {
-                    setConfirm("final");
-                  }}
+                  type="submmit"
                   className="text-center font-Poppins font-semibold bg-[#e81c5a] w-fit  px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
                 >
                   Next

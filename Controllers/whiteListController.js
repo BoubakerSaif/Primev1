@@ -54,6 +54,13 @@ const createWhiteList = asyncHandler(async (req, res) => {
       breakLow,
       createdBy: req.User._id,
     });
+    const player = await User.findById(req.User._id);
+    if (player) {
+      player.whiteListStatus = "Pending";
+      await player.save();
+    } else {
+      throw new Error("Player not found");
+    }
     res.status(201).json(whiteApp);
   } catch (error) {
     throw new Error(error);
@@ -80,6 +87,7 @@ const acceptWhiteList = asyncHandler(async (req, res) => {
       const player = await User.findById(whiteApp.createdBy._id);
       if (player) {
         player.WhiteListed = true;
+        player.whiteListStatus = "Treated";
         await player.save();
       } else {
         throw new Error("Player not found");
@@ -105,6 +113,7 @@ const rejectWhiteList = asyncHandler(async (req, res) => {
       const player = await User.findById(whiteApp.createdBy._id);
       if (player) {
         player.WhiteListed = false;
+        player.whiteListStatus = "Treated";
         await player.save();
       } else {
         throw new Error("Player not found");
