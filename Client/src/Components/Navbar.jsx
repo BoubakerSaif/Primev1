@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { IoPeopleSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,9 +9,11 @@ import { IoMdArrowDropup } from "react-icons/io";
 import primelogo from "../assets/images/primelogo.png";
 const Navbar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const logout = (e) => {
     e.preventDefault();
     dispatch(logoutUser());
+    navigate("/");
   };
   const menuselect = new Audio(
     "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727529567/select_bzty16.mp3"

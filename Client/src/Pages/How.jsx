@@ -15,6 +15,8 @@ import Cat2 from "../Components/Whitelist/Cat2";
 import Cat3 from "../Components/Whitelist/Cat3";
 import { Cat4 } from "../Components/Whitelist/Cat4";
 import Cat5 from "../Components/Whitelist/Cat5";
+import JoinDiscord from "../Components/Whitelist/JoinDiscord";
+import LoginFirst from "../Components/Whitelist/LoginFirst";
 
 Step3;
 const How = () => {
@@ -45,7 +47,6 @@ const How = () => {
     obeyLaw: "",
     breakLow: "",
   });
-  console.log(whiteList);
   return (
     <div>
       <Navbar />
@@ -93,20 +94,25 @@ const How = () => {
             />
             <p className="text-sm font-semibold">Step 3</p>
           </div>
-          <div
-            onClick={() => {
-              setStep("step4");
-              setCat("");
-            }}
-            className="flex flex-col items-center gap-3 hover:cursor-pointer   "
-          >
-            <FaRegCheckCircle
-              className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                step == "step4" ? "bg-[#e81c5a] " : ""
-              } `}
-            />
-            <p className="text-sm font-semibold">Step 4</p>
-          </div>
+          {userInfo &&
+            userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
+              .length == 1 && (
+              <div
+                onClick={() => {
+                  setStep("step4");
+                  setCat("");
+                }}
+                className="flex flex-col items-center gap-3 hover:cursor-pointer   "
+              >
+                <FaRegCheckCircle
+                  className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
+                    step == "step4" ? "bg-[#e81c5a] " : ""
+                  } `}
+                />
+                <p className="text-sm font-semibold">Step 4</p>
+              </div>
+            )}
+
           {step == "step5" && (
             <div
               onClick={() => {
@@ -127,6 +133,7 @@ const How = () => {
         {step == "step1" && <Step1 setStep={setStep} />}
         {step == "step2" && <Step2 setStep={setStep} />}
 
+        {step == "step3" && !userInfo ? <LoginFirst /> : ""}
         {step == "step3" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -134,6 +141,15 @@ const How = () => {
         ) : (
           ""
         )}
+
+        {step == "step3" &&
+        userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
+          .length == 0 ? (
+          <JoinDiscord />
+        ) : (
+          ""
+        )}
+
         {step == "step4" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -141,12 +157,6 @@ const How = () => {
         ) : (
           ""
         )}
-
-        {step == "step3" &&
-        userInfo?.guilds?.filter((el) => el.id !== "1273036528196653077")
-          .length == 0
-          ? "You need to join our discord first"
-          : ""}
 
         {step == "step5" &&
         cat == "cat1" &&

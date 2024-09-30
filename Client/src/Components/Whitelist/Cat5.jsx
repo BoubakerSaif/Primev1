@@ -14,7 +14,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
     "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727536985/kick_oo8op3.mp3"
   );
   const textAudio = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727535172/welcom2_hi5xsd.wav"
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727731515/morgan_x0mgg1.mp3"
   );
   const [choice, setChoice] = useState("nothing");
   const [firstTry, setFirstTry] = useState(true);
@@ -29,13 +29,13 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
       epicaudio.play();
       setTimeout(() => {
         textAudio.play();
-      }, 5000);
+      }, 4000);
     }
   }, []);
   useEffect(() => {
     setTimeout(() => {
       epicaudio.play();
-    }, 24000);
+    }, 27000);
   }, []);
 
   return (
@@ -77,7 +77,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                   <motion.span
                     initial={{ opacity: !firstTry ? 1 : 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: !firstTry ? 0 : 9 }}
+                    transition={{ delay: !firstTry ? 0 : 10 }}
                     className="block"
                   >
                     This place has its own rules... strict rules. You have two
@@ -86,7 +86,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                   <motion.span
                     initial={{ opacity: !firstTry ? 1 : 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: !firstTry ? 0 : 15 }}
+                    transition={{ delay: !firstTry ? 0 : 17 }}
                   >
                     obey the law and find your place in society, or break the
                     law and seek your fortune in the shadows.
@@ -95,7 +95,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                     className="block mt-1"
                     initial={{ opacity: !firstTry ? 1 : 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: !firstTry ? 0 : 22 }}
+                    transition={{ delay: !firstTry ? 0 : 25 }}
                   >
                     What will you choose?
                   </motion.span>
@@ -103,7 +103,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                 <motion.div
                   initial={{ opacity: !firstTry ? 1 : 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: !firstTry ? 0 : 24 }}
+                  transition={{ delay: !firstTry ? 0 : 27 }}
                   className="mx-auto mt-2 flex justify-center gap-3 items-center  "
                 >
                   <button
@@ -128,7 +128,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                 <motion.button
                   initial={{ opacity: !firstTry ? 1 : 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: !firstTry ? 0 : 28 }}
+                  transition={{ delay: !firstTry ? 0 : 30 }}
                   onClick={() => {
                     setCat("cat4");
                     setStep("step5");

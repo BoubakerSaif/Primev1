@@ -81,6 +81,7 @@ app.get("/auth/redirect", async (req, res) => {
     user.discord_username = username || user.discord_username;
     user.global_name = global_name || user.global_name;
     user.discord_avatar = avatar || user.discord_avatar;
+    user.guilds = userGuilds.data;
     user.email = email || user.email;
     user.verified = verified || user.verified;
     const updatedUser = await user.save();

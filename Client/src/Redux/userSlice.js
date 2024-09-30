@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { clearCredentials, setCredentials } from "./authSlice";
 import { toast } from "react-hot-toast";
-
+import { useNavigate } from "react-router-dom";
 export const loginUser = createAsyncThunk(
   "user/login",
   async (payload, { dispatch, rejectWithValue }) => {
