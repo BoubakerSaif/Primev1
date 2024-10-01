@@ -14,7 +14,7 @@ const Step4 = ({ setStep, setCat }) => {
               setCat("cat1");
               setStep("step5");
             }}
-            className="bg-[#e81c5a] px-4 py-2 rounded-lg hover:bg-[#1d1d1d]"
+            className="bg-white text-black px-4 py-2 rounded-lg hover:bg-[#1d1d1d] hover:text-white"
           >
             Accept Rules
           </button>

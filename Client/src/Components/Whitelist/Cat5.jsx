@@ -5,6 +5,8 @@ import legit from "../../assets/images/3_st.png";
 import criminal from "../../assets/images/criminal.png";
 import { useDispatch } from "react-redux";
 import { createWhiteList } from "../../Redux/whiteListSlice";
+import { useNavigate } from "react-router-dom";
+import { clearCredentials } from "../../Redux/authSlice";
 const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
   const animations = {
     initial: { opacity: 0, x: 0 },
@@ -18,10 +20,14 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
   );
   const [choice, setChoice] = useState("nothing");
   const [firstTry, setFirstTry] = useState(true);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const createApp = (e) => {
     e.preventDefault();
     dispatch(createWhiteList(whiteList));
+    navigate("/");
+    dispatch(clearCredentials());
+    window.scroll(0, 0);
   };
 
   useEffect(() => {
@@ -48,7 +54,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
         className=" h-auto   "
       >
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit  px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
+          <h1 className="text-center text-2xl font-Poppins font-semibold text-black bg-white w-fit  px-4 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer">
             {choice == "final"
               ? "General Rules Confirmation and Submission"
               : "Fifth Category : Forge Your Path"}
@@ -111,7 +117,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                       setChoice("obey");
                       setFirstTry(false);
                     }}
-                    className="bg-[#e81c5a] px-3 py-[2px] rounded-md  hover:shadow-[#e81c5a] hover:shadow-[0px_0px_30px] "
+                    className="bg-white text-black font-semibold px-3 py-[2px] rounded-md  hover:shadow-white hover:shadow-[0px_0px_30px] "
                   >
                     Obey The Law
                   </button>
@@ -120,7 +126,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                       setChoice("break");
                       setFirstTry(false);
                     }}
-                    className="bg-[#e81c5a] px-3 py-[2px] rounded-md  hover:shadow-[#e81c5a] hover:shadow-[0px_0px_30px] "
+                    className="bg-white text-black font-semibold px-3 py-[2px] rounded-md  hover:shadow-white hover:shadow-[0px_0px_30px] "
                   >
                     Break The Law
                   </button>
@@ -167,7 +173,7 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                 <button
                   onClick={createApp}
                   type="submit"
-                  className="text-center font-Poppins font-semibold bg-[#e81c5a] w-fit  px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
+                  className="text-center font-Poppins font-semibold bg-white text-black w-fit  px-4 py-1 rounded-md hover:shadow-white  hover:shadow-[0px_0px_30px]  hover:bg-white hover:cursor-pointer"
                 >
                   Confirm WhiteList
                 </button>
@@ -210,24 +216,25 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                     }}
                     className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-60 "
                     type="text"
-                    placeholder="What is the most creative scene you can imagine involving buying a company?"
+                    placeholder="What is the most creative scene you can imagine involving dealing drugs?"
                     name="breakLow"
                   ></textarea>
                 </div>
               </form>
               <div className=" flex justify-end gap-5 ">
                 <button
+                  onClick={createApp}
                   type="submmit"
-                  className="text-center font-Poppins font-semibold bg-[#e81c5a] w-fit  px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
+                  className="text-center font-Poppins font-semibold bg-white text-black w-fit  px-4 py-1 rounded-md hover:shadow-white  hover:shadow-[0px_0px_30px]  hover:bg-white hover:cursor-pointer"
                 >
-                  Next
+                  Confirm WhiteList
                 </button>
                 <button
                   onClick={() => {
                     setChoice("nothing");
                     setWhiteList({ ...whiteList, breakLow: "" });
                   }}
-                  className="text-center font-Poppins font-semibold bg-white text-[#010101] w-fit  px-4 py-1 rounded-md hover:cursor-pointer"
+                  className="text-center font-Poppins font-semibold bg-white text-black  w-fit  px-4 py-1 rounded-md hover:cursor-pointer"
                 >
                   Go back
                 </button>

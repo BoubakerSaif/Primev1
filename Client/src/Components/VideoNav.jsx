@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
 import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
+import videonav from "../assets/images/videonav.mp4";
 
 const VideoNav = () => {
   const dispatch = useDispatch();
@@ -26,9 +27,7 @@ const VideoNav = () => {
   return (
     <div className="w-full h-full relative flex justify-center items-center bg-[#010101]  ">
       <video
-        src={
-          "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727220400/Gray_Red_Bold_History_YouTube_Thumbnail_3_ag3yta.mp4"
-        }
+        src={videonav}
         autoPlay
         loop
         muted
@@ -83,7 +82,7 @@ const VideoNav = () => {
               menuselect.play();
             }}
             to={"/"}
-            className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
+            className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
           >
             HOME
           </Link>
@@ -92,7 +91,7 @@ const VideoNav = () => {
               menuselect.play();
             }}
             to="/joinus"
-            className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+            className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
           >
             HOW TO JOIN
           </Link>
@@ -100,7 +99,7 @@ const VideoNav = () => {
             onMouseEnter={() => {
               menuselect.play();
             }}
-            className=" text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+            className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
           >
             ABOUT US
           </Link>
@@ -108,7 +107,7 @@ const VideoNav = () => {
             onMouseEnter={() => {
               menuselect.play();
             }}
-            className="  text-gray-300 brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
+            className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
           >
             CONTACT
           </Link>

@@ -6,7 +6,7 @@ const Cat3 = ({ setCat, setStep, whiteList, setWhiteList }) => {
   };
   return (
     <div className=" h-auto w-[900px] max-lg:w-[640px] ">
-      <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
+      <h1 className="text-center text-2xl font-Poppins font-semibold text-black bg-white w-fit mx-auto px-4 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer">
         Third Category : RP Knowledge Base 2
       </h1>
       <form className="flex flex-col h-full gap-6 font-Poppins mt-3   ">
@@ -50,55 +50,27 @@ const Cat3 = ({ setCat, setStep, whiteList, setWhiteList }) => {
           ></textarea>
         </div>
 
-        <div className="flex flex-col gap-2 ">
-          <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer">
-            Scenario 4: Discovering a Secret
-          </label>
-          <textarea
-            onChange={onChangeHandler}
-            className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-44 text-sm"
-            type="text"
-            placeholder="Your character stumbles upon a hidden passage that might lead outside the city. What do they do next?"
-            name="sceneFour"
-            value={whiteList.sceneFour}
-          ></textarea>
-        </div>
-
-        <div className="flex flex-col gap-2 ">
-          <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer">
-            Scenario 5: Forge your destiny
-          </label>
-          <textarea
-            onChange={onChangeHandler}
-            className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-44 text-sm"
-            type="text"
-            placeholder="Based on your character perks, when does your character die?"
-            name="sceneFive"
-            value={whiteList.sceneFive}
-          ></textarea>
-        </div>
-
         <div className="flex justify-end">
           <div className=" w-fit flex gap-2">
-            <button
-              onClick={() => {
-                setCat("cat4");
-                setStep("step5");
-                window.scrollTo(0, 0);
-              }}
-              className="text-center  font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
-            >
-              Next
-            </button>
             <button
               onClick={() => {
                 setCat("cat2");
                 setStep("step5");
                 window.scrollTo(0, 0);
               }}
-              className="text-center  font-Poppins font-semibold bg-white text-[#010101] w-fit mx-auto px-4 py-1 rounded-md  hover:cursor-pointer"
+              className="text-center  font-Poppins font-semibold bg-[#131313] text-white w-fit mx-auto px-2 py-1 rounded-md  hover:cursor-pointer"
             >
               Go back
+            </button>
+            <button
+              onClick={() => {
+                setCat("cat4");
+                setStep("step5");
+                window.scrollTo(0, 0);
+              }}
+              className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
+            >
+              Next
             </button>
           </div>
         </div>

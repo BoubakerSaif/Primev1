@@ -7,7 +7,7 @@ const Cat2 = ({ setCat, setStep, whiteList, setWhiteList }) => {
 
   return (
     <div className=" h-auto max-lg:w-[640px] w-[900px] ">
-      <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
+      <h1 className="text-center text-2xl font-Poppins font-semibold text-black  bg-white w-fit mx-auto px-4 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer">
         Second Category : RP Knowledge Base 1
       </h1>
       <form className="flex flex-col h-full gap-6 font-Poppins mt-3   ">
@@ -80,39 +80,27 @@ const Cat2 = ({ setCat, setStep, whiteList, setWhiteList }) => {
           ></textarea>
         </div>
 
-        <div className="flex flex-col gap-2 ">
-          <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer">
-            Character's Initial Reactions
-          </label>
-          <textarea
-            onChange={onChangeHandler}
-            className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-44 text-sm "
-            placeholder="What is your character’s initial reaction upon waking up in this mysterious city? Are they fearful, curious, angry,or something else? (Helps understand their psychological profile)"
-            name="charReaction"
-            value={whiteList.charReaction}
-          ></textarea>
-        </div>
         <div className="flex justify-end">
           <div className=" w-fit flex gap-2">
-            <button
-              onClick={() => {
-                setCat("cat3");
-                setStep("step5");
-                window.scrollTo(0, 0);
-              }}
-              className="text-center  font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
-            >
-              Next
-            </button>
             <button
               onClick={() => {
                 setCat("cat1");
                 setStep("step5");
                 window.scrollTo(0, 0);
               }}
-              className="text-center  font-Poppins font-semibold bg-white text-[#010101] w-fit mx-auto px-4 py-1 rounded-md  hover:cursor-pointer"
+              className="text-center  font-Poppins font-semibold bg-[#131313] text-white w-fit mx-auto px-2 py-1 rounded-md  hover:cursor-pointer"
             >
               Go back
+            </button>
+            <button
+              onClick={() => {
+                setCat("cat3");
+                setStep("step5");
+                window.scrollTo(0, 0);
+              }}
+              className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
+            >
+              Next
             </button>
           </div>
         </div>

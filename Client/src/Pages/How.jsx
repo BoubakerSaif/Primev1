@@ -36,12 +36,10 @@ const How = () => {
     charBack: "",
     reason: "",
     charSkills: "",
-    charReaction: "",
     sceneOne: "",
     sceneTwo: "",
     sceneThree: "",
-    sceneFour: "",
-    sceneFive: "",
+
     charLongTermGoals: "",
     potCharDev: "",
     existStrat: "",
@@ -61,8 +59,8 @@ const How = () => {
             className="flex flex-col items-center gap-3 hover:cursor-pointer   "
           >
             <IoGameControllerOutline
-              className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                step == "step1" ? "bg-[#e81c5a] " : ""
+              className={`bg-[#131313]  text-4xl p-2 rounded-xl ${
+                step == "step1" ? "bg-white text-black  " : ""
               } `}
             />
             <p className="text-sm font-semibold">Step 1</p>
@@ -75,8 +73,8 @@ const How = () => {
             className="flex flex-col items-center gap-3 hover:cursor-pointer   "
           >
             <SiFivem
-              className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                step == "step2" ? "bg-[#e81c5a] " : ""
+              className={`bg-[#131313]  text-4xl p-2 rounded-xl ${
+                step == "step2" ? "bg-white text-black " : ""
               } `}
             />
             <p className="text-sm font-semibold">Step 2</p>
@@ -89,8 +87,8 @@ const How = () => {
             className="flex flex-col items-center gap-3 hover:cursor-pointer   "
           >
             <FaQuestion
-              className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                step == "step3" ? "bg-[#e81c5a] " : ""
+              className={`bg-[#131313]  text-4xl p-2 rounded-xl ${
+                step == "step3" ? "bg-white text-black " : ""
               } `}
             />
             <p className="text-sm font-semibold">Step 3</p>
@@ -104,8 +102,8 @@ const How = () => {
               className="flex flex-col items-center gap-3 hover:cursor-pointer   "
             >
               <FaRegCheckCircle
-                className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                  step == "step4" ? "bg-[#e81c5a]" : ""
+                className={`bg-[#131313]  text-4xl p-2 rounded-xl ${
+                  step == "step4" ? "bg-white text-black " : ""
                 } `}
               />
               <p className="text-sm font-semibold">Step 4</p>
@@ -120,8 +118,8 @@ const How = () => {
               className="flex flex-col items-center gap-3 hover:cursor-pointer   "
             >
               <SlNotebook
-                className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                  step == "step5" ? "bg-[#e81c5a] " : ""
+                className={`bg-[#131313] text-4xl p-2 rounded-xl ${
+                  step == "step5" ? "bg-white text-black " : ""
                 } `}
               />
               <p className="text-sm font-semibold">Step 5</p>

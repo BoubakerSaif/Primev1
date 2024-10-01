@@ -13,7 +13,7 @@ const Step1 = ({ setStep }) => {
             onClick={() => {
               setStep("step2");
             }}
-            className="bg-[#e81c5a] px-4 py-2 rounded-lg hover:bg-[#1d1d1d]"
+            className="bg-white text-black px-4 py-2 rounded-lg hover:bg-[#1d1d1d] hover:text-white"
           >
             Yeah, I bought it
           </button>

@@ -6,7 +6,7 @@ export const Cat4 = ({ setCat, setStep, whiteList, setWhiteList }) => {
   };
   return (
     <div className=" h-auto w-[900px] max-lg:w-[640px] ">
-      <h1 className="text-center text-2xl font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer">
+      <h1 className="text-center text-2xl font-Poppins font-semibold text-black bg-white w-fit mx-auto px-4 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer">
         Fourth Category : RP Knowledge Base 3
       </h1>
       <form className="flex flex-col h-full gap-6 font-Poppins mt-3   ">
@@ -54,23 +54,23 @@ export const Cat4 = ({ setCat, setStep, whiteList, setWhiteList }) => {
           <div className=" w-fit flex gap-2">
             <button
               onClick={() => {
-                setCat("cat5");
-                setStep("step5");
-                window.scrollTo(0, 0);
-              }}
-              className="text-center font-Poppins font-semibold bg-[#e81c5a] w-fit mx-auto px-4 py-1 rounded-md  hover:text-black hover:bg-white hover:cursor-pointer"
-            >
-              Next
-            </button>
-            <button
-              onClick={() => {
                 setCat("cat3");
                 setStep("step5");
                 window.scrollTo(0, 0);
               }}
-              className="text-center  font-Poppins font-semibold bg-white text-[#010101] w-fit mx-auto px-4 py-1 rounded-md  hover:cursor-pointer"
+              className="text-center  font-Poppins font-semibold bg-[#131313] text-white w-fit mx-auto px-2 py-1 rounded-md  hover:cursor-pointer"
             >
               Go back
+            </button>
+            <button
+              onClick={() => {
+                setCat("cat5");
+                setStep("step5");
+                window.scrollTo(0, 0);
+              }}
+              className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
+            >
+              Next
             </button>
           </div>
         </div>

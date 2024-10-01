@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./Components/Navbar";
 import { Outlet } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "./Redux/userSlice";
 
 import "react-toastify/dist/ReactToastify.css";
-import toast, { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
 const App = () => {
   const dispatch = useDispatch();
@@ -17,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-      <Toaster position="top-right" />
+      <ToastContainer />
       <Outlet />
       <Footer />
 
