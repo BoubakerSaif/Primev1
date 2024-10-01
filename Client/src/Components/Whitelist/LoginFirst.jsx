@@ -7,10 +7,7 @@ const LoginFirst = () => {
     <div>
       <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
         <div className="flex flex-col items-center  h-32 w-96 justify-around gap-9 ">
-          <h1 className="font-bold text-2xl">
-            You need to be a member of our Discord Server to be able to pass the
-            WhiteListApp
-          </h1>
+          <h1 className="font-bold text-2xl">You need to Login With Discord</h1>
           <div className="flex gap-8 font-semibold">
             <Link
               to={"http://localhost:5000/auth"}

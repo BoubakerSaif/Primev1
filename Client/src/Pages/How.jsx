@@ -21,6 +21,7 @@ import LoginFirst from "../Components/Whitelist/LoginFirst";
 Step3;
 const How = () => {
   const [step, setStep] = useState("step1");
+  console.log(step);
   const [cat, setCat] = useState("");
   const { userInfo } = useSelector((state) => state.auth);
   const [whiteList, setWhiteList] = useState({
@@ -94,24 +95,22 @@ const How = () => {
             />
             <p className="text-sm font-semibold">Step 3</p>
           </div>
-          {userInfo &&
-            userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
-              .length == 1 && (
-              <div
-                onClick={() => {
-                  setStep("step4");
-                  setCat("");
-                }}
-                className="flex flex-col items-center gap-3 hover:cursor-pointer   "
-              >
-                <FaRegCheckCircle
-                  className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
-                    step == "step4" ? "bg-[#e81c5a] " : ""
-                  } `}
-                />
-                <p className="text-sm font-semibold">Step 4</p>
-              </div>
-            )}
+          {step == "step4" && (
+            <div
+              onClick={() => {
+                setStep("step4");
+                setCat("");
+              }}
+              className="flex flex-col items-center gap-3 hover:cursor-pointer   "
+            >
+              <FaRegCheckCircle
+                className={`bg-[#131313]text-white text-4xl p-2 rounded-xl ${
+                  step == "step4" ? "bg-[#e81c5a]" : ""
+                } `}
+              />
+              <p className="text-sm font-semibold">Step 4</p>
+            </div>
+          )}
 
           {step == "step5" && (
             <div

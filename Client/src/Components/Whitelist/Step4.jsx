@@ -7,9 +7,7 @@ const Step4 = ({ setStep, setCat }) => {
     <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
       <img src={white} className="w-36  " />
       <div className="flex flex-col items-center  h-32 w-96 justify-around gap-3 ">
-        <h1 className="font-bold text-2xl">
-          The WhiteListApp is composed of 5 categories of questions
-        </h1>
+        <h1 className="font-bold text-2xl">Rules</h1>
         <div className="flex gap-8 font-semibold">
           <button
             onClick={() => {
@@ -18,7 +16,7 @@ const Step4 = ({ setStep, setCat }) => {
             }}
             className="bg-[#e81c5a] px-4 py-2 rounded-lg hover:bg-[#1d1d1d]"
           >
-            Start the App
+            Accept Rules
           </button>
           <Link
             to={"/"}
