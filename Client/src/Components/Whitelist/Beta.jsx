@@ -1,7 +1,55 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { createBetaApp } from "../../Redux/betaAppSlice";
+import { useNavigate } from "react-router-dom";
+import { clearCredentials } from "../../Redux/authSlice";
 const Beta = () => {
-  const onChangeHandler = (e) => {};
+  const [betaApp, setBetaApp] = useState({
+    name: "",
+    discordId: "",
+    age: "",
+    prevRpExp: "",
+    charEth: "",
+    charBack: "",
+    liveEmail: "",
+    streamLink: "",
+  });
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const onChangeHandler = (e) => {
+    setBetaApp({ ...betaApp, [e.target.name]: e.target.value });
+  };
+  const confirmbetaApp = (e) => {
+    e.preventDefault();
+    if (!betaApp.name.match(/[a-z]/gi) || betaApp.name.length < 3) {
+      toast.warn("Name is not valid", { theme: "dark" });
+    } else if (!betaApp.discordId.match(/[a-z]#[0-9]/gi)) {
+      toast.warn("DiscordId is not valid", { theme: "dark" });
+    } else if (!betaApp.age.match(/[0-9]/gi) || betaApp.age.length < 2) {
+      toast.warn("Age is not valid", { theme: "dark" });
+    } else if (betaApp.prevRpExp.length < 150) {
+      toast.warn("Previus Roleplay Experience must be a least 150 letters ", {
+        theme: "dark",
+      });
+    } else if (!betaApp.charEth.match(/[a-z]/gi)) {
+      toast.warn("Character Ethnicity is not valid", { theme: "dark" });
+    } else if (betaApp.charBack.length < 150) {
+      toast.warn("Character background must be a least 150 letters", {
+        theme: "dark",
+      });
+    } else if (!betaApp.liveEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      toast.warn("Email is not valid", {
+        theme: "dark",
+      });
+    } else {
+      dispatch(createBetaApp(betaApp));
+      navigate("/");
+      dispatch(clearCredentials());
+      window.scroll(0, 0);
+      toast.success("Your Beta App have been submitted successfully");
+    }
+  };
   return (
     <div className=" max-lg:w-[640px]  w-[900px] ">
       <h1 className="text-center text-2xl font-Poppins text-black font-semibold bg-white w-fit mx-auto px-4 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer">
@@ -23,6 +71,7 @@ const Beta = () => {
             placeholder="What is your real name"
             name="name"
             required
+            value={betaApp.name}
           />
           <p class="mt-2 hidden [.validated_&]:peer-invalid:block text-pink-600">
             Please provide your first name.
@@ -38,6 +87,7 @@ const Beta = () => {
             type="text"
             placeholder="e.g., username#1234"
             name="discordId"
+            value={betaApp.discordId}
           />
         </div>
         <div className="flex flex-col gap-2 ">
@@ -50,6 +100,7 @@ const Beta = () => {
             type="text"
             placeholder="Must be 18+ to apply"
             name="age"
+            value={betaApp.age}
           />
         </div>
 
@@ -62,6 +113,7 @@ const Beta = () => {
             className="bg-[#010101] border-[#3d3d3d] border-[1px] rounded-md h-60 max-lg:w-[640px] px-2  "
             placeholder="Briefly describe your previous experience in roleplay servers or communities"
             name="prevRpExp"
+            value={betaApp.prevRpExp}
           ></textarea>
         </div>
         <div className="flex flex-col gap-2 ">
@@ -73,7 +125,8 @@ const Beta = () => {
             className="bg-[#010101] border-[#3d3d3d] border-[1px] rounded-md h-9 text-sm max-lg:w-[640px] px-2 "
             type="text"
             placeholder="Ex: Amerian, Mexican,Arabian etc.."
-            name="discordId"
+            name="charEth"
+            value={betaApp.charEth}
           />
         </div>
         <div className="flex flex-col gap-2 ">
@@ -84,7 +137,8 @@ const Beta = () => {
             onChange={onChangeHandler}
             className="bg-[#010101] border-[#3d3d3d] border-[1px] rounded-md h-60 max-lg:w-[640px] px-2  "
             placeholder="Briefly describe your Character"
-            name="prevRpExp"
+            name="charBack"
+            value={betaApp.charBack}
           ></textarea>
         </div>
         <div className="flex flex-col gap-2 ">
@@ -96,7 +150,8 @@ const Beta = () => {
             className="bg-[#010101] border-[#3d3d3d] border-[1px] rounded-md h-9 text-sm max-lg:w-[640px] px-2 "
             type="email"
             placeholder="Type your email here"
-            name="email"
+            name="liveEmail"
+            value={betaApp.liveEmail}
           />
         </div>
         <div className="flex flex-col gap-2 ">
@@ -110,6 +165,7 @@ const Beta = () => {
             type="text"
             placeholder="Streaming Channel Link"
             name="streamLink"
+            value={betaApp.streamLink}
           />
         </div>
         <div className="flex justify-end max-lg:w-[600px] ">
@@ -117,7 +173,10 @@ const Beta = () => {
             <button className="text-center  font-Poppins font-semibold bg-[#131313] text-white w-fit mx-auto px-2 py-1 rounded-md  hover:cursor-pointer">
               Cancel
             </button>
-            <button className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer">
+            <button
+              onClick={confirmbetaApp}
+              className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
+            >
               Confirm Application
             </button>
           </div>

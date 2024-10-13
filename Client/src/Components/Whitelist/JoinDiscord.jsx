@@ -18,7 +18,6 @@ const JoinDiscord = () => {
             onClick={() => {
               dispatch(clearCredentials());
             }}
-            target="_blank"
             to={"https://discord.com/invite/UJEgUBMBT8"}
             className="bg-indigo-600 px-[3px] py-1 rounded-lg hover:bg-[#1d1d1d] flex items-center gap-2"
           >

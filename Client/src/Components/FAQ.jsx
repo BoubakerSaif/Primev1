@@ -28,7 +28,7 @@ const FAQ = () => {
           <div className="bg-[#131313] w-[450px] flex flex-col rounded-md p-4 border-[1px] border-[#3d3d3d]  font-Poppins ">
             <p className="font-semibold">How do I start on Prime RP?</p>
             <p className="text-[12px] text-slate-300 ">
-              irst you need to download a licensed GTA V and then install the
+              First you need to download a licensed GTA V and then install the
               Fivem Launcher.
             </p>
           </div>

@@ -8,10 +8,11 @@ const Step3 = ({ setStep }) => {
   return (
     <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
       <img src={white} className="w-36  " />
-      {userInfo?.whiteListStatus == "noApp" && (
+      {userInfo?.BetaStatus == "noApp" && (
         <div className="flex flex-col items-center  h-32 w-96 justify-around gap-3 ">
           <h1 className="font-bold text-2xl">
-            The WhiteListApp is composed of 5 categories of questions
+            Welcome to our Beta Application, hit the start button if you're
+            ready
           </h1>
           <div className="flex gap-8 font-semibold">
             <button
@@ -33,7 +34,12 @@ const Step3 = ({ setStep }) => {
       )}
       {userInfo?.whiteListStatus == "Pending" && (
         <div className="text-white font-bold text-lg mt-14  ">
-          Your Whitelist App is under treatment process
+          Your Whitelist App is under treatment process.
+        </div>
+      )}
+      {userInfo?.BetaStatus == "Pending" && (
+        <div className="text-white font-bold text-lg mt-14  ">
+          Your Beta Application is under treatment process.
         </div>
       )}
     </div>

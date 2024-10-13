@@ -24,9 +24,9 @@ const createBetaApp = asyncHandler(async (req, res) => {
       charBack,
       liveEmail,
       streamLink,
-      createdBy: "66fc7bf739d34505b115e480",
+      createdBy: req.User._id,
     });
-    const player = await User.findById("66fc7bf739d34505b115e480");
+    const player = await User.findById(req.User._id);
     if (player) {
       player.BetaStatus = "Pending";
       await player.save();

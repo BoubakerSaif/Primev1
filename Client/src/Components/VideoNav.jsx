@@ -25,9 +25,7 @@ const VideoNav = () => {
 
   return (
     <div
-      className={`w-full ${
-        location.pathname == "/" ? "h-screen" : "h-full"
-      } relative flex justify-center items-center bg-[#010101]  `}
+      className={`w-full h-full relative flex justify-center items-center bg-[#010101]  `}
     >
       <video
         src={
@@ -36,7 +34,7 @@ const VideoNav = () => {
         autoPlay
         loop
         muted
-        className={`  ${location.pathname !== "/" && "hidden"} `}
+        className={`w-full  ${location.pathname !== "/" && "hidden"} `}
       />
       <div
         className={`flex justify-around text-white w-full font-Poppins px-5  ${

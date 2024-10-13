@@ -194,8 +194,8 @@ const How = () => {
           />
         ) : (
           ""
-        )} */}
-        {/* {step == "step5" &&
+        )}
+        {step == "step5" &&
         cat == "cat2" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -207,8 +207,8 @@ const How = () => {
           />
         ) : (
           ""
-        )} */}
-        {/* {step == "step5" &&
+        )}
+        {step == "step5" &&
         cat == "cat3" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -220,8 +220,8 @@ const How = () => {
           />
         ) : (
           ""
-        )} */}
-        {/* {step == "step5" &&
+        )}
+        {step == "step5" &&
         cat == "cat4" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -233,8 +233,8 @@ const How = () => {
           />
         ) : (
           ""
-        )} */}
-        {/* {step == "step5" &&
+        )}
+        {step == "step5" &&
         cat == "cat5" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
