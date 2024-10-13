@@ -1,7 +1,7 @@
 import React from "react";
 import gta5 from "../../assets/images/gta5.png";
 import { Link } from "react-router-dom";
-const Step1 = ({ setStep, confirmselect }) => {
+const Step1 = ({ setStep }) => {
   return (
     <div className="text-white flex items-start justify-around h-[400px]  w-[700px] max-xl:w-[600px] mt-12  ">
       <img src={gta5} className="w-60 " />
@@ -10,7 +10,6 @@ const Step1 = ({ setStep, confirmselect }) => {
         <div className="flex gap-8 font-semibold">
           <button
             onClick={() => {
-              confirmselect.play();
               setStep("step2");
             }}
             className="bg-white text-black px-4 py-2 rounded-lg hover:bg-[#1d1d1d] hover:text-white"

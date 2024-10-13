@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "./Redux/userSlice";
-
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";

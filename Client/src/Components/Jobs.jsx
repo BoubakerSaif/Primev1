@@ -79,9 +79,11 @@ const Jobs = () => {
           <div className="h-[120px] justify-between flex items-center    group hover:cursor-pointer    ">
             <p className="flex flex-col text-start gap-2  ">
               <span className="bg-white text-black duration-200 group-hover:bg-black  group-hover:text-white w-fit py-1 px-4 rounded-md font-semibold">
-                Tabac
+                Tobacco
               </span>
-              <span className="font-medium ">Explore the world of TABAC </span>
+              <span className="font-medium ">
+                Explore the world of Tobacco{" "}
+              </span>
             </p>
             <img src={az1} className="w-36 " />
           </div>

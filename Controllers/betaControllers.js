@@ -98,4 +98,19 @@ const rejectBetaApp = asyncHandler(async (req, res) => {
   }
 });
 
-export { createBetaApp, getAllBetaApps, acceptBetaApp, rejectBetaApp };
+const getmyBetaApp = asyncHandler(async (req, res) => {
+  try {
+    const myBetaApp = await closedBeta.find({
+      createdBy: req.User._id,
+    });
+    res.json(myBetaApp);
+  } catch (error) {}
+});
+
+export {
+  createBetaApp,
+  getAllBetaApps,
+  acceptBetaApp,
+  rejectBetaApp,
+  getmyBetaApp,
+};

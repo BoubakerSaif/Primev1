@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { SiFivem } from "react-icons/si";
 import { SlNotebook } from "react-icons/sl";
 import { FaQuestion } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FaRegCheckCircle } from "react-icons/fa";
 import Step1 from "../Components/Whitelist/Step1";
 import Step2 from "../Components/Whitelist/Step2";
@@ -16,15 +16,19 @@ import { Cat4 } from "../Components/Whitelist/Cat4";
 import Cat5 from "../Components/Whitelist/Cat5";
 import JoinDiscord from "../Components/Whitelist/JoinDiscord";
 import LoginFirst from "../Components/Whitelist/LoginFirst";
-import confirmsound from "../assets/sounds/confirmsound.mp3";
-import backsound from "../assets/sounds/backsound.mp3";
 import Beta from "../Components/Whitelist/Beta";
-Step3;
+import { getmyBetaApp } from "../Redux/betaAppSlice";
+
 const How = () => {
   const [step, setStep] = useState("step1");
-  console.log(step);
   const [cat, setCat] = useState("");
   const { userInfo } = useSelector((state) => state.auth);
+  const { myBetaApp } = useSelector((state) => state.beta);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getmyBetaApp());
+  }, []);
   const [whiteList, setWhiteList] = useState({
     name: "",
     discordId: "",
@@ -46,12 +50,6 @@ const How = () => {
     obeyLaw: "",
     breakLow: "",
   });
-  const confirmselect = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727906001/confirmsound_cyxnwc.mp3"
-  );
-  const backmenu = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727906001/backsound_yxqrcj.mp3"
-  );
 
   return (
     <div>
@@ -133,22 +131,14 @@ const How = () => {
           )}
         </div>
 
-        {step == "step1" && (
-          <Step1 setStep={setStep} confirmselect={confirmselect} />
-        )}
-        {step == "step2" && (
-          <Step2 setStep={setStep} confirmselect={confirmselect} />
-        )}
+        {step == "step1" && <Step1 setStep={setStep} />}
+        {step == "step2" && <Step2 setStep={setStep} />}
 
-        {step == "step3" && !userInfo ? <LoginFirst backmenu={backmenu} /> : ""}
+        {step == "step3" && !userInfo ? <LoginFirst /> : ""}
         {step == "step3" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Step3
-            setStep={setStep}
-            confirmselect={confirmselect}
-            backmenu={backmenu}
-          />
+          <Step3 setStep={setStep} myBetaApp={myBetaApp} />
         ) : (
           ""
         )}
@@ -164,11 +154,7 @@ const How = () => {
         {step == "step4" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Step4
-            setStep={setStep}
-            setCat={setCat}
-            confirmselect={confirmselect}
-          />
+          <Step4 setStep={setStep} setCat={setCat} />
         ) : (
           ""
         )}

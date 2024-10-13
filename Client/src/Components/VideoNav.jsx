@@ -19,13 +19,12 @@ const VideoNav = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
   const location = useLocation();
-  const menuselect = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727905925/selectsan_mxyhbn.mp3"
-  );
 
   return (
     <div
-      className={`w-full h-full relative flex justify-center items-center bg-[#010101]  `}
+      className={`w-full h-full relative flex justify-center items-center bg-[#010101] ${
+        location.pathname == "/dashboard" && "hidden"
+      }  `}
     >
       <video
         src={
@@ -37,9 +36,9 @@ const VideoNav = () => {
         className={`w-full  ${location.pathname !== "/" && "hidden"} `}
       />
       <div
-        className={`flex justify-around text-white w-full font-Poppins px-5  ${
+        className={`flex justify-around text-white w-full font-Poppins px-5   ${
           location.pathname == "/" && "absolute top-0 "
-        }  mt-6`}
+        }  mt-5`}
       >
         <div className="lg:hidden max-lg:block max-lg:mt-1">
           {show && (
@@ -68,10 +67,6 @@ const VideoNav = () => {
               <span className="group-hover:[text-shadow:0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200">
                 rime
               </span>
-              {/* <img
-                src={primelogo}
-                className="w-16 group-hover:shadow-[0px_0px_40px_rgba(255,255,255,1)] text-4xl group-hover:brightness-200 rounded-full "
-              /> */}
             </div>
           </Link>
           <div className=" mt-3 ml-3 h-fit flex items-center gap-2 bg-black bg-opacity-30 p-1  rounded-lg">
@@ -81,40 +76,32 @@ const VideoNav = () => {
         </div>
         <div className="flex justify-between gap-10  mr-48 lg:mr-0 font-medium cursor-pointer h-fit max-lg:hidden text-base mt-4 ">
           <Link
-            onMouseEnter={() => {
-              menuselect.play();
-            }}
             to={"/"}
             className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
           >
             HOME
           </Link>
           <Link
-            onMouseEnter={() => {
-              menuselect.play();
-            }}
             to="/joinus"
             className=" card px-1  text-white brightness-90  hover:text-white  hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105 flex justify-center items-center
    "
           >
             <h1>APPLY FOR CLOSED BETA</h1>
           </Link>
-          <Link
-            onMouseEnter={() => {
-              menuselect.play();
-            }}
-            className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
-          >
+          <Link className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  ">
             ABOUT US
           </Link>
-          <Link
-            onMouseEnter={() => {
-              menuselect.play();
-            }}
-            className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
-          >
+          <Link className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
             CONTACT
           </Link>
+          {userInfo && (
+            <Link
+              to="/dashboard"
+              className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
+            >
+              DASHBOARD
+            </Link>
+          )}
         </div>
         {userInfo ? (
           <div className="flex items-center gap-5 ">
