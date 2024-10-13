@@ -32,7 +32,9 @@ const Step3 = ({ setStep }) => {
         </div>
       )}
       {userInfo?.whiteListStatus == "Pending" && (
-        <div className="text-white">Your Whitelist app is under treatement</div>
+        <div className="text-white font-bold text-lg mt-14  ">
+          Your Whitelist App is under treatment process
+        </div>
       )}
     </div>
   );

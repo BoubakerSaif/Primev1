@@ -2,7 +2,7 @@ import React from "react";
 import fivem from "../../assets/images/fivemlogo.png";
 import { Link } from "react-router-dom";
 
-const Step2 = ({ setStep }) => {
+const Step2 = ({ setStep, confirmselect }) => {
   return (
     <div className="text-white flex items-start justify-around max-lg:justify-center h-[400px] w-[700px] max-xl:w-[600px]  mt-12 ">
       <img src={fivem} className="w-60 " />
@@ -11,6 +11,7 @@ const Step2 = ({ setStep }) => {
         <div className="flex gap-8 max-lg:gap-3 font-semibold">
           <button
             onClick={() => {
+              confirmselect.play();
               setStep("step3");
             }}
             className="bg-white text-black px-4 py-2 rounded-lg hover:bg-[#1d1d1d] hover:text-white "

@@ -18,7 +18,6 @@ const createWhiteList = asyncHandler(async (req, res) => {
     sceneOne,
     sceneTwo,
     sceneThree,
-
     charLongTermGoals,
     potCharDev,
     existStrat,
@@ -42,7 +41,6 @@ const createWhiteList = asyncHandler(async (req, res) => {
       sceneOne,
       sceneTwo,
       sceneThree,
-
       charLongTermGoals,
       potCharDev,
       existStrat,

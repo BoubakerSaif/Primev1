@@ -12,6 +12,12 @@ const Cat1 = ({ setCat, setStep, whiteList, setWhiteList }) => {
       toast.warn("Name is not valid", { theme: "dark" });
     } else if (!whiteList.discordId.match(/[a-z]#[0-9]/gi)) {
       toast.warn("DiscordId is not valid", { theme: "dark" });
+    } else if (whiteList.age.length < 2) {
+      toast.warn("Age is not valid", { theme: "dark" });
+    } else if (whiteList.prevRpExp.length < 150) {
+      toast.warn("Previus Roleplay Experience must be a least 150 letters ", {
+        theme: "dark",
+      });
     } else {
       setCat("cat2");
       setStep("step5");

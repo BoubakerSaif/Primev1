@@ -1,8 +1,32 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 export const Cat4 = ({ setCat, setStep, whiteList, setWhiteList }) => {
   const onChangeHandler = (e) => {
     setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
+  };
+  const nextStep = (e) => {
+    e.preventDefault();
+    if (whiteList.charLongTermGoals.length < 150) {
+      toast.warn("Character’s Long-Term Goals must be a least 150 letters", {
+        theme: "dark",
+      });
+    } else if (whiteList.potCharDev.length < 150) {
+      toast.warn(
+        "Potential Character Development must be a least 150 letters ",
+        {
+          theme: "dark",
+        }
+      );
+    } else if (whiteList.existStrat.length < 150) {
+      toast.warn("Exit Strategy must be a least 150 letters ", {
+        theme: "dark",
+      });
+    } else {
+      setCat("cat5");
+      setStep("step5");
+      window.scrollTo(0, 0);
+    }
   };
   return (
     <div className=" h-auto w-[900px] max-lg:w-[640px] ">
@@ -63,11 +87,7 @@ export const Cat4 = ({ setCat, setStep, whiteList, setWhiteList }) => {
               Go back
             </button>
             <button
-              onClick={() => {
-                setCat("cat5");
-                setStep("step5");
-                window.scrollTo(0, 0);
-              }}
+              onClick={nextStep}
               className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
             >
               Next

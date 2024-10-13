@@ -11,8 +11,8 @@ import job1 from "../assets/images/Jobs/job_1.png";
 import job2 from "../assets/images/Jobs/job_2.png";
 const Jobs = () => {
   return (
-    <div className=" w-full 2xl:h-screen bg-[#010101] text-white  flex flex-col items-center gap-14 text-center max-2xl:gap-20    ">
-      <div className=" w-full font-Poppins   font-bold max-2xl:mt-24">
+    <div className=" w-full h-screen  border-red-500 bg-[#010101] text-white  flex flex-col items-center gap-14 text-center max-2xl:gap-20">
+      <div className=" w-full 2xl:mt-14 font-Poppins font-bold max-2xl:mt-24">
         <p className="text-gray-500 uppercase  text-2xl">
           what we give players
         </p>

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
 import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
-import videonav from "../assets/images/videonav.mp4";
+import "./Border.css";
 
 const VideoNav = () => {
   const dispatch = useDispatch();
@@ -19,29 +19,34 @@ const VideoNav = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
   const location = useLocation();
-
   const menuselect = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727529567/select_bzty16.mp3"
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727905925/selectsan_mxyhbn.mp3"
   );
 
   return (
-    <div className="w-full h-full relative flex justify-center items-center bg-[#010101]  ">
+    <div
+      className={`w-full ${
+        location.pathname == "/" ? "h-screen" : "h-full"
+      } relative flex justify-center items-center bg-[#010101]  `}
+    >
       <video
-        src={videonav}
+        src={
+          "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727909396/videonav_twapno.mp4"
+        }
         autoPlay
         loop
         muted
-        className={`w-full ${location.pathname == "/rpguide" ? "hidden" : ""}`}
+        className={`  ${location.pathname !== "/" && "hidden"} `}
       />
       <div
-        className={`flex justify-around text-white w-full font-Poppins top-0 px-5  ${
-          location.pathname == "/rpguide" ? "" : "absolute "
+        className={`flex justify-around text-white w-full font-Poppins px-5  ${
+          location.pathname == "/" && "absolute top-0 "
         }  mt-6`}
       >
         <div className="lg:hidden max-lg:block max-lg:mt-1">
           {show && (
             <IoMdArrowDropup
-              className="w-fit text-3xl  hover:border-2 hover:cursor-pointer rounded-md mt-1"
+              className="w-fit text-3xl hover:border-2 hover:cursor-pointer rounded-md mt-1"
               onClick={() => {
                 setShow(!show);
               }}
@@ -56,7 +61,7 @@ const VideoNav = () => {
             />
           )}
         </div>
-        <div className="flex gap-9 max-lg:gap-0 text-white    ">
+        <div className="flex gap-10 max-lg:gap-0 text-white    ">
           <Link to="/#" className=" text-4xl flex  gap-1 font-bold  ">
             <div className="group lg:hover:scale-125 duration-500  ">
               <span className="text-white text-5xl group-hover:[text-shadow:0px_0px_40px_rgba(255,255,255,1)] group-hover:brightness-200 ">
@@ -91,9 +96,10 @@ const VideoNav = () => {
               menuselect.play();
             }}
             to="/joinus"
-            className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+            className=" card px-1  text-white brightness-90  hover:text-white  hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105 flex justify-center items-center
+   "
           >
-            HOW TO JOIN
+            <h1>APPLY FOR CLOSED BETA</h1>
           </Link>
           <Link
             onMouseEnter={() => {
@@ -141,26 +147,27 @@ const VideoNav = () => {
           <div className="w-screen text-white text-center flex justify-center gap-4   items-center    text-sm font-semibold   ">
             <Link className=" rounded-md bg-[##0e0e0f] w-fit  ">HOME</Link>
             <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">
-              HOW TO JOIN
+              APPLY FOR CLOSED BETA
             </Link>
             <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">ABOUT US</Link>
             <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">CONTACT</Link>
           </div>
         )}
       </div>
-
-      <Link
-        target="_blank"
-        to="https://youtu.be/sk9slehg6Rc?si=qP6i1yfv5_2QqB6Q "
-        className={`${
-          location.pathname == "/rpguide" ? "hidden" : ""
-        } group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-[#3d3d3d] border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white   `}
-      >
-        <FaPlayCircle className="text-5xl  text-white sm:text-3xl group-hover:text-black " />
-        <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black max-lg:text-sm   ">
-          Watch Trailer
-        </button>
-      </Link>
+      {location.pathname == "/" && (
+        <Link
+          target="_blank"
+          to="https://youtu.be/sk9slehg6Rc?si=qP6i1yfv5_2QqB6Q "
+          className={`${
+            location.pathname == "/rpguide" ? "hidden" : ""
+          } group absolute top-[60%] max-lg:top-[80%] flex items-center justify-around py-2 max-lg:w-40 w-60 rounded-full cursor-pointer group-hover:brightness-150 border-[#3d3d3d] border-2  hover:bg-white hover:shadow-[0px_0px_50px] hover:shadow-white   `}
+        >
+          <FaPlayCircle className="text-5xl  text-white sm:text-3xl group-hover:text-black " />
+          <button className="text-white font-Poppins font-bold text-xl  group-hover:text-black max-lg:text-sm   ">
+            Watch Trailer
+          </button>
+        </Link>
+      )}
     </div>
   );
 };

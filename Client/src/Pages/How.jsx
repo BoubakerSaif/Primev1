@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { SiFivem } from "react-icons/si";
 import { SlNotebook } from "react-icons/sl";
@@ -17,7 +16,9 @@ import { Cat4 } from "../Components/Whitelist/Cat4";
 import Cat5 from "../Components/Whitelist/Cat5";
 import JoinDiscord from "../Components/Whitelist/JoinDiscord";
 import LoginFirst from "../Components/Whitelist/LoginFirst";
-
+import confirmsound from "../assets/sounds/confirmsound.mp3";
+import backsound from "../assets/sounds/backsound.mp3";
+import Beta from "../Components/Whitelist/Beta";
 Step3;
 const How = () => {
   const [step, setStep] = useState("step1");
@@ -39,18 +40,23 @@ const How = () => {
     sceneOne: "",
     sceneTwo: "",
     sceneThree: "",
-
     charLongTermGoals: "",
     potCharDev: "",
     existStrat: "",
     obeyLaw: "",
     breakLow: "",
   });
+  const confirmselect = new Audio(
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727906001/confirmsound_cyxnwc.mp3"
+  );
+  const backmenu = new Audio(
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727906001/backsound_yxqrcj.mp3"
+  );
+
   return (
     <div>
-      <Navbar />
       <main className="bg-[#010101] flex items-center text-white font-Poppins flex-col gap-12">
-        <div className="flex h-fit gap-16 mt-2">
+        <div className="flex h-fit gap-16 mt-8">
           <div
             onClick={() => {
               setStep("step1");
@@ -127,14 +133,22 @@ const How = () => {
           )}
         </div>
 
-        {step == "step1" && <Step1 setStep={setStep} />}
-        {step == "step2" && <Step2 setStep={setStep} />}
+        {step == "step1" && (
+          <Step1 setStep={setStep} confirmselect={confirmselect} />
+        )}
+        {step == "step2" && (
+          <Step2 setStep={setStep} confirmselect={confirmselect} />
+        )}
 
-        {step == "step3" && !userInfo ? <LoginFirst /> : ""}
+        {step == "step3" && !userInfo ? <LoginFirst backmenu={backmenu} /> : ""}
         {step == "step3" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Step3 setStep={setStep} />
+          <Step3
+            setStep={setStep}
+            confirmselect={confirmselect}
+            backmenu={backmenu}
+          />
         ) : (
           ""
         )}
@@ -150,12 +164,25 @@ const How = () => {
         {step == "step4" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Step4 setStep={setStep} setCat={setCat} />
+          <Step4
+            setStep={setStep}
+            setCat={setCat}
+            confirmselect={confirmselect}
+          />
         ) : (
           ""
         )}
 
         {step == "step5" &&
+        cat == "cat1" &&
+        userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
+          .length == 1 ? (
+          <Beta />
+        ) : (
+          ""
+        )}
+
+        {/* {step == "step5" &&
         cat == "cat1" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -167,8 +194,8 @@ const How = () => {
           />
         ) : (
           ""
-        )}
-        {step == "step5" &&
+        )} */}
+        {/* {step == "step5" &&
         cat == "cat2" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -180,8 +207,8 @@ const How = () => {
           />
         ) : (
           ""
-        )}
-        {step == "step5" &&
+        )} */}
+        {/* {step == "step5" &&
         cat == "cat3" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -193,8 +220,8 @@ const How = () => {
           />
         ) : (
           ""
-        )}
-        {step == "step5" &&
+        )} */}
+        {/* {step == "step5" &&
         cat == "cat4" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -206,8 +233,8 @@ const How = () => {
           />
         ) : (
           ""
-        )}
-        {step == "step5" &&
+        )} */}
+        {/* {step == "step5" &&
         cat == "cat5" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
@@ -220,7 +247,7 @@ const How = () => {
           />
         ) : (
           ""
-        )}
+        )} */}
       </main>
     </div>
   );

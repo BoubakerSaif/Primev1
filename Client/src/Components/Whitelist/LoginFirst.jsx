@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 
-const LoginFirst = () => {
+const LoginFirst = ({ backmenu }) => {
   return (
     <div>
       <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
@@ -18,6 +18,9 @@ const LoginFirst = () => {
               Login With Discord
             </Link>
             <Link
+              onClick={() => {
+                backmenu.play();
+              }}
               to={"/"}
               className=" px-6 py-2 rounded-lg border-[1px] border-[#3d3d3d] hover:bg-[#1d1d1d] "
             >

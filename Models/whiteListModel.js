@@ -6,7 +6,7 @@ const whiteListSchema = mongoose.Schema({
   age: { type: String },
   timezone: { type: String },
   hearAboutUs: { type: String },
-  naprevRpExpme: { type: String },
+  prevRpExp: { type: String },
   charName: { type: String },
   charEth: { type: String },
   charBack: { type: String },

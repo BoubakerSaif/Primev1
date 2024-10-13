@@ -7,6 +7,8 @@ import { useDispatch } from "react-redux";
 import { createWhiteList } from "../../Redux/whiteListSlice";
 import { useNavigate } from "react-router-dom";
 import { clearCredentials } from "../../Redux/authSlice";
+import { toast } from "react-toastify";
+
 const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
   const animations = {
     initial: { opacity: 0, x: 0 },
@@ -22,12 +24,8 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
   const [firstTry, setFirstTry] = useState(true);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const createApp = (e) => {
-    e.preventDefault();
-    dispatch(createWhiteList(whiteList));
-    navigate("/");
-    dispatch(clearCredentials());
-    window.scroll(0, 0);
+  const onChangeHandler = (e) => {
+    setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
   };
 
   useEffect(() => {
@@ -159,19 +157,36 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
                     A star in the dust
                   </label>
                   <textarea
-                    onChange={(e) => {
-                      setWhiteList({ ...whiteList, obeyLaw: e.target.value });
-                    }}
+                    onChange={onChangeHandler}
                     className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-60 "
                     type="text"
                     placeholder="What is the most creative scene you can imagine involving buying a company?"
                     name="obeyLaw"
+                    value={whiteList.obeyLaw}
                   ></textarea>
                 </div>
               </form>
               <div className=" flex justify-end gap-5 ">
                 <button
-                  onClick={createApp}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (whiteList.obeyLaw.length < 150) {
+                      toast.warn(
+                        "A star in the dust must be a least 150 letters",
+                        {
+                          theme: "dark",
+                        }
+                      );
+                    } else {
+                      dispatch(createWhiteList(whiteList));
+                      navigate("/");
+                      dispatch(clearCredentials());
+                      window.scroll(0, 0);
+                      toast.success(
+                        "Your WhiteList App have been submitted successfully"
+                      );
+                    }
+                  }}
                   type="submit"
                   className="text-center font-Poppins font-semibold bg-white text-black w-fit  px-4 py-1 rounded-md hover:shadow-white  hover:shadow-[0px_0px_30px]  hover:bg-white hover:cursor-pointer"
                 >
@@ -204,26 +219,43 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
               <h1 className="text-start px-4">
                 I don’t trust this place. I’ll make my own rules.
               </h1>
-              <form onSubmit={createApp}>
+              <form>
                 <div className="flex flex-col gap-2 ">
                   <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer ">
                     A star in the dust
                   </label>
 
                   <textarea
-                    onChange={(e) => {
-                      setWhiteList({ ...whiteList, breakLow: e.target.value });
-                    }}
+                    onChange={onChangeHandler}
                     className="bg-[#010101] px-2 py-1 border-[#3d3d3d] border-[1px] rounded-md h-60 "
                     type="text"
                     placeholder="What is the most creative scene you can imagine involving dealing drugs?"
                     name="breakLow"
+                    value={whiteList.breakLaw}
                   ></textarea>
                 </div>
               </form>
               <div className=" flex justify-end gap-5 ">
                 <button
-                  onClick={createApp}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (whiteList.breakLow.length < 150) {
+                      toast.warn(
+                        "A star in the dust must be a least 150 letters",
+                        {
+                          theme: "dark",
+                        }
+                      );
+                    } else {
+                      dispatch(createWhiteList(whiteList));
+                      navigate("/");
+                      dispatch(clearCredentials());
+                      window.scroll(0, 0);
+                      toast.success(
+                        "Your WhiteList App have been submitted successfully"
+                      );
+                    }
+                  }}
                   type="submmit"
                   className="text-center font-Poppins font-semibold bg-white text-black w-fit  px-4 py-1 rounded-md hover:shadow-white  hover:shadow-[0px_0px_30px]  hover:bg-white hover:cursor-pointer"
                 >

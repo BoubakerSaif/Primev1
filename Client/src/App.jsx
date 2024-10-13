@@ -7,6 +7,7 @@ import { loginUser } from "./Redux/userSlice";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
+import VideoNav from "./Components/VideoNav";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -17,9 +18,9 @@ const App = () => {
   return (
     <div>
       <ToastContainer />
+      <VideoNav />
       <Outlet />
       <Footer />
-
       <SpeedInsights />
     </div>
   );

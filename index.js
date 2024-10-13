@@ -8,6 +8,7 @@ import axios from "axios";
 import User from "./Models/userModel.js";
 import jwt from "jsonwebtoken";
 import whiteListRoutes from "./Routes/whiteListRoutes.js";
+import closedBetaRoutes from "./Routes/closedBetaRoutes.js";
 
 const app = express();
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use("/auth", userRoutes);
 app.use("/whiteApp", whiteListRoutes);
+app.use("/betaApp", closedBetaRoutes);
 app.get("/auth", async (req, res) => {
   const url =
     "https://discord.com/oauth2/authorize?client_id=1287395955183718512&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fredirect&scope=identify+guilds+email";

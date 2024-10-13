@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import wall from "../assets/images/6.png";
 import metro from "../assets/images/metro.png";
-import Navbar from "../Components/Navbar";
 
 const RPGuide = () => {
   useEffect(() => {
@@ -10,7 +9,6 @@ const RPGuide = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <div className="bg-[#010101] h-auto text-white font-Poppins relative">
         <main className="flex flex-col gap-28">
           <div className="text-center gap-8 flex flex-col ">

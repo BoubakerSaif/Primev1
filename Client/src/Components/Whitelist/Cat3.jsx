@@ -1,8 +1,33 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Cat3 = ({ setCat, setStep, whiteList, setWhiteList }) => {
   const onChangeHandler = (e) => {
     setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
+  };
+  const nextStep = (e) => {
+    e.preventDefault();
+    if (whiteList.sceneOne.length < 150) {
+      toast.warn(
+        "Scenario 1: Encounter with a Stranger must be a least 150 letters",
+        { theme: "dark" }
+      );
+    } else if (whiteList.sceneTwo.length < 150) {
+      toast.warn("Scenario 2: Resource Scarcity must be a least 150 letters ", {
+        theme: "dark",
+      });
+    } else if (whiteList.sceneThree.length < 150) {
+      toast.warn(
+        "Scenario 3: Confrontation with Authority must be a least 150 letters ",
+        {
+          theme: "dark",
+        }
+      );
+    } else {
+      setCat("cat4");
+      setStep("step5");
+      window.scrollTo(0, 0);
+    }
   };
   return (
     <div className=" h-auto w-[900px] max-lg:w-[640px] ">
@@ -63,11 +88,7 @@ const Cat3 = ({ setCat, setStep, whiteList, setWhiteList }) => {
               Go back
             </button>
             <button
-              onClick={() => {
-                setCat("cat4");
-                setStep("step5");
-                window.scrollTo(0, 0);
-              }}
+              onClick={nextStep}
               className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
             >
               Next

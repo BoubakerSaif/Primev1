@@ -1,8 +1,39 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Cat2 = ({ setCat, setStep, whiteList, setWhiteList }) => {
   const onChangeHandler = (e) => {
     setWhiteList({ ...whiteList, [e.target.name]: e.target.value });
+  };
+  const nextStep = (e) => {
+    e.preventDefault();
+    if (!whiteList.charName.match(/[a-z]/gi) || whiteList.name.length < 3) {
+      toast.warn("Character Name is not valid", { theme: "dark" });
+    } else if (!whiteList.charEth.match(/[a-z]/gi)) {
+      toast.warn("Character Ethincity is not valid", { theme: "dark" });
+    } else if (whiteList.charBack.length < 150) {
+      toast.warn(
+        "Character's Background and Status must be a least 150 letters ",
+        {
+          theme: "dark",
+        }
+      );
+    } else if (whiteList.reason.length < 150) {
+      toast.warn("Reason for Being in the City must be a least 150 letters ", {
+        theme: "dark",
+      });
+    } else if (whiteList.charSkills.length < 150) {
+      toast.warn(
+        "Character’s Skills and Knowledge must be a least 150 letters ",
+        {
+          theme: "dark",
+        }
+      );
+    } else {
+      setCat("cat3");
+      setStep("step5");
+      window.scrollTo(0, 0);
+    }
   };
 
   return (
@@ -93,11 +124,7 @@ const Cat2 = ({ setCat, setStep, whiteList, setWhiteList }) => {
               Go back
             </button>
             <button
-              onClick={() => {
-                setCat("cat3");
-                setStep("step5");
-                window.scrollTo(0, 0);
-              }}
+              onClick={nextStep}
               className="text-center  font-Poppins font-semibold  bg-white text-black  w-fit mx-auto px-5 py-1 rounded-md  hover:text-white hover:bg-[#131313] hover:cursor-pointer"
             >
               Next
