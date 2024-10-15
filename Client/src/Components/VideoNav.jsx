@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { IoPeopleSharp } from "react-icons/io5";
@@ -8,6 +8,7 @@ import { logoutUser } from "../Redux/userSlice";
 import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
 import "./Border.css";
+import { getmyBetaApp } from "../Redux/betaAppSlice";
 
 const VideoNav = () => {
   const dispatch = useDispatch();
@@ -16,10 +17,16 @@ const VideoNav = () => {
     dispatch(logoutUser());
   };
 
+  const { myBetaApp, createdBetaApp, rejectedApp, acceptedApp } = useSelector(
+    (state) => state.beta
+  );
+  console.log(myBetaApp);
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
   const location = useLocation();
-
+  useEffect(() => {
+    dispatch(getmyBetaApp());
+  }, [createdBetaApp, rejectedApp, acceptedApp]);
   return (
     <div
       className={`w-full h-full relative flex justify-center items-center bg-[#010101] ${
@@ -94,7 +101,7 @@ const VideoNav = () => {
           <Link className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
             CONTACT
           </Link>
-          {userInfo && (
+          {userInfo && userInfo?.role === "Admin" && (
             <Link
               to="/dashboard"
               className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   "
@@ -105,10 +112,31 @@ const VideoNav = () => {
         </div>
         {userInfo ? (
           <div className="flex items-center gap-5 ">
-            <p className="mt-2"> {userInfo?.global_name} </p>
+            <p className="mt-2 flex flex-col items-center gap-2 text-center ">
+              <span className="text-xl"> {userInfo?.global_name}</span>
+              <span
+                className={`text-xs ${
+                  myBetaApp && myBetaApp[0] && myBetaApp[0].status === "Pending"
+                    ? "bg-orange-600 p-1 rounded-md"
+                    : myBetaApp &&
+                      myBetaApp[0] &&
+                      myBetaApp[0].status === "Accepted"
+                    ? "bg-green-600 p-1 rounded-md"
+                    : myBetaApp &&
+                      myBetaApp[0] &&
+                      myBetaApp[0].status === "Rejected"
+                    ? "bg-red-600 p-1 rounded-md"
+                    : ""
+                }  `}
+              >
+                {myBetaApp && myBetaApp[0] && myBetaApp[0].status
+                  ? `App ${myBetaApp && myBetaApp[0] && myBetaApp[0].status}`
+                  : ""}
+              </span>
+            </p>
             <img
               src={`https://cdn.discordapp.com/avatars/${userInfo?.discord_id}/${userInfo?.discord_avatar}`}
-              className="w-14 h-14 mt-1 rounded-3xl"
+              className="w-14 h-14 mt-2 rounded-3xl"
             />
             <Link
               onClick={logout}

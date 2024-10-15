@@ -4,9 +4,7 @@ import white from "../../assets/images/white.png";
 import { useDispatch, useSelector } from "react-redux";
 
 const Step3 = ({ setStep, myBetaApp }) => {
-  console.log(myBetaApp);
   const { userInfo } = useSelector((state) => state.auth);
-
   return (
     <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
       {userInfo?.BetaStatus == "noApp" && (
@@ -14,8 +12,8 @@ const Step3 = ({ setStep, myBetaApp }) => {
           <img src={white} className="w-36  " />
           <div className="flex flex-col items-center  h-32 w-96 justify-around gap-3 ">
             <h1 className="font-bold text-2xl">
-              Welcome to our Beta Application, hit the start button if you're
-              ready
+              Welcome to our Closed Beta Application, hit the start button if
+              you're ready
             </h1>
 
             <div className="flex gap-8 font-semibold">
@@ -46,7 +44,7 @@ const Step3 = ({ setStep, myBetaApp }) => {
         <>
           <img src={white} className="w-36  " />
           <div className="text-white font-bold text-lg mt-14  ">
-            Your Beta Application is under treatment process.
+            Your ClosedBeta Application is under treatment process.
           </div>
         </>
       )}
@@ -54,7 +52,7 @@ const Step3 = ({ setStep, myBetaApp }) => {
         <>
           <img src={white} className="w-36  " />
           <div className="text-white font-bold text-lg mt-14  ">
-            Your ClosedBeta Application is Accetped.
+            Your ClosedBeta Application is Accepted.
           </div>
         </>
       )}

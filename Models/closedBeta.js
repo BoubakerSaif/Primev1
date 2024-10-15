@@ -9,6 +9,7 @@ const closedBetaSchema = mongoose.Schema({
   charBack: { type: String },
   liveEmail: { type: String },
   streamLink: { type: String },
+  steamProfile: { type: String },
   status: { type: String, default: "Pending" },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,

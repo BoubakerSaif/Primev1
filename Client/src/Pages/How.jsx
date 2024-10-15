@@ -18,6 +18,7 @@ import JoinDiscord from "../Components/Whitelist/JoinDiscord";
 import LoginFirst from "../Components/Whitelist/LoginFirst";
 import Beta from "../Components/Whitelist/Beta";
 import { getmyBetaApp } from "../Redux/betaAppSlice";
+import { loginUser } from "../Redux/userSlice";
 
 const How = () => {
   const [step, setStep] = useState("step1");
@@ -27,6 +28,7 @@ const How = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(loginUser());
     dispatch(getmyBetaApp());
   }, []);
   const [whiteList, setWhiteList] = useState({

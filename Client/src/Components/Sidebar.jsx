@@ -18,7 +18,7 @@ function Sidebar({ setSide }) {
   const [isOpen, setIsOpen] = useState(false); // State to manage dropdown
 
   return (
-    <aside className="h-screen w-64 bg-gray-800 text-white flex flex-col">
+    <aside className="h-screen w-64 bg-[#131313] text-white flex flex-col">
       <div className="p-4 text-lg font-semibold border-b border-gray-700 flex items-center space-x-2">
         <img
           src="src/assets/images/primeLogo.png"

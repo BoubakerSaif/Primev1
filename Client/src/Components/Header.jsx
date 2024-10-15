@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // Import useLocation from react-router-dom
 import { useDispatch, useSelector } from "react-redux";
-import { clearCredentials } from "../Redux/authSlice";
+import { logoutUser } from "../Redux/userSlice";
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false); // State to manage dropdown visibility
   const location = useLocation(); // Get the current route location
@@ -16,7 +16,7 @@ function Header() {
   // Function to get the page name based on the current path
 
   return (
-    <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-gray-700">
+    <div className="flex items-center justify-between p-4 bg-[#131313] border-b border-[#131313]">
       <div className="flex items-center">
         <h1 className="text-lg text-white">Dashboard</h1>
       </div>
@@ -37,12 +37,11 @@ function Header() {
 
         {/* Log out Button */}
         <button
-          onClick={(e) => {
-            e.preventDefault();
-            dispatch(clearCredentials());
+          onClick={() => {
+            dispatch(logoutUser());
             navigate("/");
           }}
-          className="  bg-indigo-600 p-2 rounded-3xl text-white  font-medium h-fit "
+          className="bg-indigo-600 p-2 rounded-3xl text-white  font-medium h-fit "
         >
           Log out
         </button>

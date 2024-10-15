@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { createBetaApp } from "../../Redux/betaAppSlice";
 import { useNavigate } from "react-router-dom";
-import { clearCredentials } from "../../Redux/authSlice";
 const Beta = () => {
   const [betaApp, setBetaApp] = useState({
     name: "",
@@ -14,6 +13,7 @@ const Beta = () => {
     charBack: "",
     liveEmail: "",
     streamLink: "",
+    steamProfile: "",
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -32,6 +32,7 @@ const Beta = () => {
       toast.warn("Previus Roleplay Experience must be a least 150 letters ", {
         theme: "dark",
       });
+      s;
     } else if (!betaApp.charEth.match(/[a-z]/gi)) {
       toast.warn("Character Ethnicity is not valid", { theme: "dark" });
     } else if (betaApp.charBack.length < 150) {
@@ -42,10 +43,13 @@ const Beta = () => {
       toast.warn("Email is not valid", {
         theme: "dark",
       });
+    } else if (!betaApp.steamProfile.match(/(https?:\/\/[^\s]+)/gi)) {
+      toast.warn("Steam Profile is not valid", {
+        theme: "dark",
+      });
     } else {
       dispatch(createBetaApp(betaApp));
       navigate("/");
-      dispatch(clearCredentials());
       window.scroll(0, 0);
       toast.success("Your Beta App have been submitted successfully");
     }
@@ -166,6 +170,19 @@ const Beta = () => {
             placeholder="Streaming Channel Link"
             name="streamLink"
             value={betaApp.streamLink}
+          />
+        </div>
+        <div className="flex flex-col gap-2 ">
+          <label className="bg-[#131313] px-4 py-1 w-fit rounded-md font-semibold hover:text-black hover:bg-white hover:cursor-pointer">
+            Your Steam Profile
+          </label>
+          <input
+            onChange={onChangeHandler}
+            className="bg-[#010101] border-[#3d3d3d] border-[1px] rounded-md h-9 text-sm max-lg:w-[640px] px-2 "
+            type="text"
+            placeholder="Streaming Channel Link"
+            name="steamProfile"
+            value={betaApp.steamProfile}
           />
         </div>
         <div className="flex justify-end max-lg:w-[600px] ">

@@ -12,6 +12,7 @@ const createBetaApp = asyncHandler(async (req, res) => {
     charBack,
     liveEmail,
     streamLink,
+    steamProfile,
   } = req.body;
 
   try {
@@ -24,6 +25,7 @@ const createBetaApp = asyncHandler(async (req, res) => {
       charBack,
       liveEmail,
       streamLink,
+      steamProfile,
       createdBy: req.User._id,
     });
     const player = await User.findById(req.User._id);

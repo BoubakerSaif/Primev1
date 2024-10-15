@@ -178,32 +178,41 @@ const BetaApps = () => {
               <h2 className="text-xl font-bold mb-4">Additional Details</h2>
               {selectedEntry && (
                 <div>
-                  <p className="mb-2">
+                  <p className="mb-2 flex flex-col">
                     <strong>Status:</strong> {selectedEntry.status}
                   </p>
 
-                  <p className="mb-2">
+                  <p className="mb-2 flex flex-col">
                     <strong>Previous Roleplay Experience:</strong>
                     {selectedEntry.prevRpExp}
                   </p>
-                  <p className="mb-2">
+                  <p className="mb-2 flex flex-col">
                     <strong>Character Ethnicity:</strong>
                     {selectedEntry.charEth}
                   </p>
-                  <p className="mb-2">
+                  <p className="mb-2 flex flex-col">
                     <strong>Tell us about your Character:</strong>
                     {selectedEntry.charBack}
                   </p>
-                  <p className="mb-2">
+                  <p className="mb-2 flex flex-col">
                     <strong>Live Email:</strong> {selectedEntry.liveEmail}
                   </p>
-                  <p className="mb-2">
-                    <strong>Steam Link:</strong>
+                  <p className="mb-2 flex flex-col">
+                    <strong>Stream Link:</strong>
                     <a
-                      href={selectedEntry.steamLink}
+                      href={selectedEntry.streamLink}
                       className="text-blue-500 hover:underline"
                     >
-                      {selectedEntry.steamLink}
+                      {selectedEntry.streamLink}
+                    </a>
+                  </p>
+                  <p className="mb-2 flex flex-col">
+                    <strong>Steam Profile:</strong>
+                    <a
+                      href={selectedEntry.steamProfile}
+                      className="text-blue-500 hover:underline"
+                    >
+                      {selectedEntry.steamProfile}
                     </a>
                   </p>
                 </div>
