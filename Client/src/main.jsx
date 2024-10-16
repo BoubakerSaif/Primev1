@@ -13,6 +13,9 @@ import store from "./Redux/store.js";
 import How from "./Pages/How.jsx";
 import RPGuide from "./Pages/RPGuide.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
+import Terms from "./Pages/Terms.jsx";
+import CookiesPolicy from "./Pages/CookiesPolicy.jsx";
+import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +24,9 @@ const router = createBrowserRouter(
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/joinus" element={<How />} />
       <Route path="/rpguide" element={<RPGuide />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/cookiesPolicy" element={<CookiesPolicy />} />
+      <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
     </Route>
   )
 );

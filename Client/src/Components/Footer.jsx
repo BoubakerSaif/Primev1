@@ -56,17 +56,17 @@ const Footer = () => {
         <p className="text-white font-Poppins text-sm font-semibold underline decoration-1 decoration-white underline-offset-2">
           Important Informations
         </p>
-        <Link>
+        <Link to={"/terms"}>
           <p className="text-gray-400 hover:translate-x-2 duration-300 w-fit text-sm font-medium ">
             Terms & Conditions
           </p>
         </Link>
-        <Link>
+        <Link to="/privacypolicy">
           <p className="text-gray-400 hover:translate-x-2 duration-300 w-fit text-sm font-medium ">
             Privacy Policy
           </p>
         </Link>
-        <Link>
+        <Link to="/cookiespolicy">
           <p className="text-gray-400 hover:translate-x-2  duration-300 w-fit text-sm font-medium ">
             Cookies Policy
           </p>
