@@ -42,7 +42,10 @@ const createBetaApp = asyncHandler(async (req, res) => {
 });
 const getAllBetaApps = asyncHandler(async (req, res) => {
   try {
-    const allBetaApps = await closedBeta.find().populate("createdBy");
+    const allBetaApps = await closedBeta
+      .find()
+      .populate("createdBy")
+      .populate("treatedBy");
     res.status(200).json(allBetaApps);
   } catch (error) {
     throw new Error(error);
@@ -56,6 +59,7 @@ const acceptBetaApp = asyncHandler(async (req, res) => {
     const betaApp = await closedBeta.findById(id).populate("createdBy");
     if (betaApp) {
       betaApp.status = "Accepted" || betaApp.status;
+      betaApp.treatedBy = req.User._id;
       const acceptedWihteApp = await betaApp.save();
       const player = await User.findById(betaApp.createdBy._id);
       if (player) {
@@ -80,6 +84,7 @@ const rejectBetaApp = asyncHandler(async (req, res) => {
   try {
     const betaApp = await closedBeta.findById(id).populate("createdBy");
     if (betaApp) {
+      betaApp.treatedBy = req.User._id;
       betaApp.status = "Rejected" || betaApp.status;
       const rejectedBetaApp = await betaApp.save();
       const player = await User.findById(betaApp.createdBy._id);

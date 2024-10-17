@@ -6,40 +6,7 @@ import {
   getAllBetaApps,
   rejectBetaApp,
 } from "../../Redux/betaAppSlice";
-const acceptedData = [
-  // Sample data for accepted tab
-  {
-    number: 1,
-    discordname: "User#1234",
-    age: 25,
-    realname: "John Doe",
-    status: "Accepted",
-    steamLink: "https://steamcommunity.com/id/user",
-    question1: "Answer 1",
-    question2: "Answer 2",
-    question3: "Answer 3",
-    question4: "Answer 4",
-  },
 
-  // Add more data as needed
-];
-
-const rejectedData = [
-  // Sample data for rejected tab
-  {
-    number: 3,
-    discordname: "User#91011",
-    age: 30,
-    realname: "Sam Smith",
-    status: "Rejected",
-    steamLink: "https://steamcommunity.com/id/user3",
-    question1: "Rejected Answer 1",
-    question2: "Rejected Answer 2",
-    question3: "Rejected Answer 3",
-    question4: "Rejected Answer 4",
-  },
-  // Add more data as needed
-];
 const BetaApps = () => {
   const dispatch = useDispatch();
   const { betaApps, acceptedApp, rejectedApp } = useSelector(
@@ -180,6 +147,10 @@ const BetaApps = () => {
                 <div>
                   <p className="mb-2 flex flex-col">
                     <strong>Status:</strong> {selectedEntry.status}
+                  </p>
+                  <p className="mb-2 flex flex-col">
+                    <strong> Admin who checked this App :</strong>
+                    {selectedEntry.treatedBy.global_name}
                   </p>
 
                   <p className="mb-2 flex flex-col">

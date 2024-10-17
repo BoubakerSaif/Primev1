@@ -40,7 +40,7 @@ const Step3 = ({ setStep, myBetaApp }) => {
           Your Whitelist App is under treatment process.
         </div>
       )} */}
-      {myBetaApp[0]?.status == "Pending" && (
+      {myBetaApp && myBetaApp[0] && myBetaApp[0].status == "Pending" && (
         <>
           <img src={white} className="w-36  " />
           <div className="text-white font-bold text-lg mt-14  ">
@@ -48,7 +48,7 @@ const Step3 = ({ setStep, myBetaApp }) => {
           </div>
         </>
       )}
-      {myBetaApp[0]?.status == "Accepted" && (
+      {myBetaApp && myBetaApp[0] && myBetaApp[0].status == "Accepted" && (
         <>
           <img src={white} className="w-36  " />
           <div className="text-white font-bold text-lg mt-14  ">
@@ -56,7 +56,7 @@ const Step3 = ({ setStep, myBetaApp }) => {
           </div>
         </>
       )}
-      {myBetaApp[0]?.status == "Rejected" && (
+      {myBetaApp && myBetaApp[0] && myBetaApp[0].status == "Rejected" && (
         <>
           <img src={white} className="w-36  " />
           <div className="text-white font-bold text-lg mt-14  ">

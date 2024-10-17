@@ -15,6 +15,10 @@ const closedBetaSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  treatedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 export default mongoose.model("Beta", closedBetaSchema);
