@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const MainHero_5 = () => {
   return (
-    <div className=" bg-[#010101] text-center flex items-start justify-center  relative h-[500px]  ">
+    <div className=" bg-[#010101] text-center flex items-start justify-center  relative h-[500px]  font-Poppins  ">
       <motion.div
         className="flex items-center  absolute top-[-130%] right-[3%] max-lg:right-[0]  "
         initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ const MainHero_5 = () => {
           className="w-[600px] max-lg:w-96   "
         />
       </motion.div>
-      <div className="flex flex-col mt-40 gap-20  ">
+      <div className="flex flex-col mt-40 gap-20  font-Poppins  ">
         <motion.p
           className="text-white text-4xl font-semibold "
           initial={{ opacity: 0 }}

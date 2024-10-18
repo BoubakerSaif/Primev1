@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const MainHero_1 = () => {
   return (
-    <div className=" bg-[#010101] text-center relative h-[650px]   ">
+    <div className=" bg-[#010101] text-center relative h-[650px]  font-Poppins   ">
       <motion.div
         className="flex items-center absolute top-0 right-[5%]   "
         initial={{ opacity: 0 }}

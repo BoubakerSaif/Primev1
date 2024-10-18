@@ -3,7 +3,7 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <div className=" w-full h-screen flex items-center justify-center   bg-[#010101] text-white text-center max-md:h-[400px] ">
+    <div className=" w-full h-screen flex items-center justify-center   bg-[#010101] text-white text-center max-md:h-[400px] font-Poppins   ">
       <motion.div
         className="font-Poppins font-semibold"
         initial={{ opacity: 0 }}

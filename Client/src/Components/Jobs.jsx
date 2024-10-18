@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Jobs = () => {
   return (
-    <div className=" w-full h-screen flex flex-col items-center justify-evenly   bg-[#010101] text-white text-center font-bold ">
+    <div className=" w-full h-screen flex flex-col items-center justify-evenly   bg-[#010101] text-white text-center font-bold font-Poppins  ">
       <motion.div
         className="font-Poppins font-bold"
         initial={{ opacity: 0 }}

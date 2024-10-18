@@ -26,7 +26,7 @@ const Slide = () => {
             </p>
           </div>
 
-          <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] border-[1px] border-[#3d3d3d] rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
+          <div className="flex justify-between items-center w-[650px]  h-28 bg-[#131313] border-[1px]  border-[#3d3d3d] rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
             <img
               src={
                 "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259719/gta5_ke2fnq.png"
@@ -48,7 +48,7 @@ const Slide = () => {
               <p className="text-black font-bold">Buy</p>
             </Link>
           </div>
-          <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] p-3 border-[1px] border-[#3d3d3d] rounded-md max-md:w-[500px]    ">
+          <div className="flex justify-between items-center w-[650px]  h-28 bg-[#131313] p-3 border-[1px] border-[#3d3d3d] rounded-md max-md:w-[500px]    ">
             <img
               src={
                 "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259753/fivemlogo_gqzwht.png"
