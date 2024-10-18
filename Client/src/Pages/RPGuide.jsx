@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
-import wall from "../assets/images/6.png";
-import metro from "../assets/images/metro.png";
 
 const RPGuide = () => {
   useEffect(() => {
@@ -230,11 +228,15 @@ const RPGuide = () => {
             <div className=" w-full flex items-center max-xl:hidden   justify-around  ">
               <div className="flex flex-col gap-20">
                 <img
-                  src={wall}
+                  src={
+                    "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729271122/6_d4mji6.png"
+                  }
                   className="max-2xl:w-[400px] w-[500px] rounded-3xl rotate-6 brightness-75  outline outline-offset-1 outline-[#3d3d3d] "
                 />
                 <img
-                  src={metro}
+                  src={
+                    "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729272773/metro_utz9e9.png"
+                  }
                   className="max-2xl:w-[400px] w-[500px] rounded-3xl -rotate-6 brightness-75  outline outline-offset-1 outline-[#3d3d3d] "
                 />
               </div>

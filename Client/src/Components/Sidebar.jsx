@@ -21,7 +21,7 @@ function Sidebar({ setSide }) {
     <aside className="h-screen w-64 bg-[#131313] text-white flex flex-col">
       <div className="p-4 text-lg font-semibold border-b border-gray-700 flex items-center space-x-2">
         <img
-          src="src/assets/images/primeLogo.png"
+          src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729270542/logo_dpjulq.png"
           alt="Logo"
           className="h-12 w-12"
         />

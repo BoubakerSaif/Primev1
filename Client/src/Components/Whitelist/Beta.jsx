@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { createBetaApp } from "../../Redux/betaAppSlice";
 import { useNavigate } from "react-router-dom";
-const Beta = () => {
+const Beta = ({ setStep }) => {
   const [betaApp, setBetaApp] = useState({
     name: "",
     discordId: "",
@@ -187,7 +187,12 @@ const Beta = () => {
         </div>
         <div className="flex justify-end max-lg:w-[600px] ">
           <div className=" w-fit flex gap-2">
-            <button className="text-center  font-Poppins font-semibold bg-[#131313] text-white w-fit mx-auto px-2 py-1 rounded-md  hover:cursor-pointer">
+            <button
+              onClick={() => {
+                setStep("step3");
+              }}
+              className="text-center  font-Poppins font-semibold bg-[#131313] text-white w-fit mx-auto px-2 py-1 rounded-md  hover:cursor-pointer"
+            >
               Cancel
             </button>
             <button

@@ -7,7 +7,7 @@ const Businesses = () => {
         className="font-Poppins font-bold"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
       >
         <p className="font-bold text-4xl max-lg:text-2xl"> BUSINESSES</p>
         <p className="text-2xl mt-1 max-lg:text-xl">
@@ -19,7 +19,7 @@ const Businesses = () => {
         className="flex w-[1350px] justify-center gap-24 flex-wrap text-lg max-2xl:w-auto   "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.8, ease: "easeInOut" }}
+        transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
       >
         <div className="group hover:cursor-pointer flex flex-col items-center ">
           <img
@@ -69,13 +69,13 @@ const Businesses = () => {
 
           <p>Shisha Bar</p>
         </div>
-        <div className="group hover:cursor-pointer flex flex-col items-center ">
+        <div className="group hover:cursor-pointer flex flex-col items-center relative ">
           <img
-            src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729247366/m%C3%A9cano_jmfpse.png"
+            src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729274872/m%C3%A9cano_mvoxtz.png"
             className="w-64 max-2xl:w-40"
           />
 
-          <p>Mechanic</p>
+          <p className="absolute top-[70%] ">Mechanic</p>
         </div>
       </motion.div>
     </div>

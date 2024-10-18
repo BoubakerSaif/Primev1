@@ -8,7 +8,7 @@ const Experience = () => {
         className="font-Poppins font-bold"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
       >
         <p className=" uppercase  text-6xl max-md:text-3xl max-lg:text-3xl">
           We give our players a unique world of factions,businesses and jobs

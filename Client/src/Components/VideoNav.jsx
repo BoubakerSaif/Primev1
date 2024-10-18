@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
-import { IoPeopleSharp } from "react-icons/io5";
 import { FaPlayCircle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../Redux/userSlice";
@@ -9,6 +8,7 @@ import { FaBars } from "react-icons/fa6";
 import { IoMdArrowDropup } from "react-icons/io";
 import "./Border.css";
 import { getmyBetaApp } from "../Redux/betaAppSlice";
+import { LuServerOff } from "react-icons/lu";
 
 const VideoNav = () => {
   const dispatch = useDispatch();
@@ -17,6 +17,7 @@ const VideoNav = () => {
     dispatch(logoutUser());
   };
 
+  const DiscordLink = "http://localhost:5000/auth";
   const { myBetaApp, createdBetaApp, rejectedApp, acceptedApp } = useSelector(
     (state) => state.beta
   );
@@ -77,8 +78,9 @@ const VideoNav = () => {
             </div>
           </Link>
           <div className=" mt-3 ml-3 h-fit flex items-center gap-2 bg-black bg-opacity-30 p-1  rounded-lg">
-            <IoPeopleSharp className="text-xl" />
-            <p>: 0</p>
+            <LuServerOff /> <p>Server Off</p>
+            {/* <IoPeopleSharp className="text-xl" />
+            <p>: 0</p> */}
           </div>
         </div>
         <div className="flex justify-between gap-10  mr-48 lg:mr-0 font-medium cursor-pointer h-fit max-lg:hidden text-base mt-4 ">
@@ -95,12 +97,16 @@ const VideoNav = () => {
           >
             <h1>APPLY FOR CLOSED BETA</h1>
           </Link>
-          <Link className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  ">
-            ABOUT US
+          <Link
+            target="_blank"
+            to={"/rpguide"}
+            className=" text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105  "
+          >
+            ROLEPLAY GUIDE
           </Link>
-          <Link className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
+          {/* <Link className="  text-white brightness-90  hover:text-white hover:brightness-200 hover:shadow-white duration-300 hover:[text-shadow:0px_0px_20px_rgba(255,255,255,1)] hover:scale-105   ">
             CONTACT
-          </Link>
+          </Link> */}
           {userInfo && userInfo?.role === "Admin" && (
             <Link
               to="/dashboard"
@@ -147,7 +153,7 @@ const VideoNav = () => {
           </div>
         ) : (
           <Link
-            to={"http://localhost:5000/auth"}
+            to={DiscordLink}
             className="mt-3 max-lg:mt-2 bg-indigo-600 p-2 rounded-md  font-medium h-fit hover:shadow-[0px_0px_30px_rgba(48,63,159,1.000)] duration-300 flex gap-1 items-center hover:scale-110"
           >
             <span>Login</span>
@@ -158,12 +164,17 @@ const VideoNav = () => {
       <div className="lg:hidden absolute max-md:top-[30%] max-lg:top-[25%] h-fit ">
         {show && (
           <div className="w-screen text-white text-center flex justify-center gap-4   items-center    text-sm font-semibold   ">
-            <Link className=" rounded-md bg-[##0e0e0f] w-fit  ">HOME</Link>
-            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">
+            <Link to={"/"} className=" rounded-md bg-[##0e0e0f] w-fit  ">
+              HOME
+            </Link>
+            <Link to={"/joinus"} className=" rounded-lg bg-[##0e0e0f] w-fit  ">
               APPLY FOR CLOSED BETA
             </Link>
-            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">ABOUT US</Link>
-            <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">CONTACT</Link>
+            <Link to={"/rpguide"} className=" rounded-lg bg-[##0e0e0f] w-fit  ">
+              {" "}
+              ROLEPLAY GUIDE
+            </Link>
+            {/* <Link className=" rounded-lg bg-[##0e0e0f] w-fit  ">CONTACT</Link> */}
           </div>
         )}
       </div>

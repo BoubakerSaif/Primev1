@@ -7,7 +7,7 @@ const Jobs = () => {
         className="font-Poppins font-bold"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
       >
         <p className="font-bold text-4xl max-lg:text-2xl "> JOBS</p>
         <p className="text-2xl mt-1 max-lg:text-xl">Easy job, Easy money</p>
@@ -16,7 +16,7 @@ const Jobs = () => {
         className="flex  justify-center gap-24 text-lg  w-[1000px] flex-wrap max-2xl:w-auto   "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.8, ease: "easeInOut" }}
+        transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
       >
         <div className="group hover:cursor-pointer flex flex-col items-center   ">
           <img

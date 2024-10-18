@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 
 const LoginFirst = () => {
+  const DiscordLink = "http://localhost:5000/auth";
   return (
     <div>
       <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
@@ -10,7 +11,7 @@ const LoginFirst = () => {
           <h1 className="font-bold text-2xl">You need to Login With Discord</h1>
           <div className="flex gap-8 font-semibold">
             <Link
-              to={"http://localhost:5000/auth"}
+              to={DiscordLink}
               className="bg-indigo-600 px-2 py-2 rounded-lg hover:bg-[#1d1d1d] flex items-center gap-2"
             >
               <FaDiscord className="text-xl" />

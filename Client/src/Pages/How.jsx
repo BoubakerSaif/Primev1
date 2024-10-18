@@ -165,7 +165,7 @@ const How = () => {
         cat == "cat1" &&
         userInfo?.guilds?.filter((el) => el.id == "1273036528196653077")
           .length == 1 ? (
-          <Beta />
+          <Beta setStep={setStep} />
         ) : (
           ""
         )}

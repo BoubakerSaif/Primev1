@@ -1,5 +1,5 @@
 import express from "express";
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./Config/DB.js";
@@ -13,6 +13,7 @@ import closedBetaRoutes from "./Routes/closedBetaRoutes.js";
 const app = express();
 dotenv.config();
 connectDB();
+
 const port = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
