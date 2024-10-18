@@ -14,8 +14,14 @@ const Step4 = ({ setStep, setCat }) => {
         <div className="flex flex-col justify-around gap-3 w-96 ">
           <h1 className="font-bold text-2xl  ">Rules</h1>
           <p className="text-[14px]">
-            I hereby acknowledge that I have read and accept the Terms of
-            Services and the General Guidelines.
+            I hereby acknowledge that I have read and accept the
+            <Link target="_blank" to={"/terms"} className="underline">
+              {` Terms of Services `}
+            </Link>
+            and the
+            <Link to={"/rpguide"} target="_blank" className="underline">
+              {` General Guidelines.`}
+            </Link>
           </p>
           <p className="text-[14px]">
             I understand that I have a limited number of attempts to pass the

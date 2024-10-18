@@ -46,7 +46,12 @@ const Step3 = ({ setStep, myBetaApp }) => {
       )} */}
       {myBetaApp && myBetaApp[0] && myBetaApp[0].status == "Pending" && (
         <>
-          <img src={white} className="w-36  " />
+          <img
+            src={
+              "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259777/white_epcawp.png"
+            }
+            className="w-36  "
+          />
           <div className="text-white font-bold text-lg mt-14  ">
             Your ClosedBeta Application is under treatment process.
           </div>
@@ -54,7 +59,12 @@ const Step3 = ({ setStep, myBetaApp }) => {
       )}
       {myBetaApp && myBetaApp[0] && myBetaApp[0].status == "Accepted" && (
         <>
-          <img src={white} className="w-36  " />
+          <img
+            src={
+              "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259777/white_epcawp.png"
+            }
+            className="w-36  "
+          />
           <div className="text-white font-bold text-lg mt-14  ">
             Your ClosedBeta Application is Accepted.
           </div>
@@ -62,7 +72,12 @@ const Step3 = ({ setStep, myBetaApp }) => {
       )}
       {myBetaApp && myBetaApp[0] && myBetaApp[0].status == "Rejected" && (
         <>
-          <img src={white} className="w-36  " />
+          <img
+            src={
+              "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259777/white_epcawp.png"
+            }
+            className="w-36  "
+          />
           <div className="text-white font-bold text-lg mt-14  ">
             Your ClosedBeta Application is Rejected.
           </div>
