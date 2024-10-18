@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import white from "../../assets/images/white.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Step3 = ({ setStep, myBetaApp }) => {
   const { userInfo } = useSelector((state) => state.auth);
@@ -9,7 +8,12 @@ const Step3 = ({ setStep, myBetaApp }) => {
     <div className="text-white flex items-start justify-around h-[400px] w-[700px] max-xl:w-[600px] mt-12 ">
       {userInfo?.BetaStatus == "noApp" && (
         <>
-          <img src={white} className="w-36  " />
+          <img
+            src={
+              "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259777/white_epcawp.png"
+            }
+            className="w-36  "
+          />
           <div className="flex flex-col items-center  h-32 w-96 justify-around gap-3 ">
             <h1 className="font-bold text-2xl">
               Welcome to our Closed Beta Application, hit the start button if

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import gtalogo from "../assets/images/gtalogo.png";
-import fivemlogo from "../assets/images/fivemlogo.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
@@ -80,7 +78,12 @@ const Slide = () => {
         </div>
 
         <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] border-[1px] border-[#3d3d3d] rounded-md p-3 max-md:w-[500px] lg:mt-3   ">
-          <img src={gtalogo} className="w-28" />
+          <img
+            src={
+              "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259719/gta5_ke2fnq.png"
+            }
+            className="w-28"
+          />
           <div className="font-Poppins text-sm">
             <p>Buy Grand Theft Auto V.</p>
             <p>If you do not already have a licensed version</p>
@@ -95,7 +98,12 @@ const Slide = () => {
           </Link>
         </div>
         <div className="flex justify-between items-center w-[650px]  h-24 bg-[#131313] p-3 border-[1px] border-[#3d3d3d] rounded-md max-md:w-[500px]    ">
-          <img src={fivemlogo} className="w-28 h-12" />
+          <img
+            src={
+              "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259753/fivemlogo_gqzwht.png"
+            }
+            className="w-28 h-12"
+          />
           <div className="font-Poppins text-sm">
             <p>Download FiveM Launcher</p>
             <p>Launcher will download necessary server files</p>

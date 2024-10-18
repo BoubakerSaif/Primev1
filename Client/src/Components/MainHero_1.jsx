@@ -13,11 +13,13 @@ const MainHero_1 = () => {
           <p className=" text-slate-400 text-3xl  text-opacity-80  font-bold flex-col ">
             BECOME
           </p>
-          <p className=" text-white font-bold flex-col text-5xl ">CRIMINAL</p>
+          <p className=" text-white font-bold flex-col text-5xl max-lg:text-4xl  ">
+            CRIMINAL
+          </p>
         </div>
         <img
           src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729247127/c2_u5g5fo.png"
-          className="w-[600px]  "
+          className="w-[600px] max-lg:w-96  "
         />
       </motion.div>
     </div>

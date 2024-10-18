@@ -1,13 +1,8 @@
 import React from "react";
-import apo3 from "../assets/images/apo3.jfif";
-import apo2 from "../assets/images/apo2.jpg";
-import city from "../assets/images/city.png";
-import business from "../assets/images/business.jpg";
 
 const FAQ = () => {
   return (
     <div className="relative h-full w-full flex justify-center bg-[#010101]  ">
-      {/* <img src={business} className=" grayscale brightness-50 h-full w-full" /> */}
       <div className="text-white w-full h-auto flex flex-col items-center justify-center gap-7 mt-6   ">
         <p className="font-bold text-2xl ">FAQ</p>
         <div className="flex max-lg:flex-col lg:flex-row lg:flex-wrap lg:justify-center gap-5 2xl:w-[1500px] ">

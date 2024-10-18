@@ -7,7 +7,7 @@ const MainHero_5 = () => {
   return (
     <div className=" bg-[#010101] text-center flex items-start justify-center  relative h-[500px]  ">
       <motion.div
-        className="flex items-center  absolute top-[-130%] right-[3%]  "
+        className="flex items-center  absolute top-[-130%] right-[3%] max-lg:right-[0]  "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -16,13 +16,13 @@ const MainHero_5 = () => {
           <p className=" text-slate-400 text-3xl  text-opacity-80  font-bold flex-col ">
             BECOME
           </p>
-          <p className=" text-white font-bold flex-col text-5xl ">
+          <p className=" text-white font-bold flex-col text-5xl max-lg:text-4xl ">
             BUSINESS WOMEN
           </p>
         </div>
         <img
           src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729247131/c5_ipvev1.png"
-          className="w-[600px]  "
+          className="w-[600px] max-lg:w-96   "
         />
       </motion.div>
       <div className="flex flex-col mt-40 gap-20  ">

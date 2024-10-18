@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import npc from "../../assets/images/npc.png";
-import legit from "../../assets/images/3_st.png";
-import criminal from "../../assets/images/criminal.png";
+
 import { useDispatch } from "react-redux";
 import { createWhiteList } from "../../Redux/whiteListSlice";
 import { useNavigate } from "react-router-dom";
@@ -65,7 +63,9 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
               initial={{ opacity: !firstTry ? 1 : 0 }}
               animate={{ opacity: 1 }}
               transition={{ ease: "easeInOut" }}
-              src={npc}
+              src={
+                "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259631/npc_w6i7no.png"
+              }
               className=" w-96 h-96 max-xl:mt-8 border-[#3d3d3d] border-double border-[5px] rounded-md mx-auto mt-7"
             />
             <motion.div
@@ -205,7 +205,9 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
             </div>
             <div>
               <img
-                src={legit}
+                src={
+                  "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259647/3_st_sailqm.png"
+                }
                 className=" w-96 h-96 max-xl:mt-8 border-[#3d3d3d] border-double border-[5px] rounded-md mx-auto mt-7"
               />
             </div>
@@ -274,7 +276,9 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
             </div>
             <div>
               <img
-                src={criminal}
+                src={
+                  "https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729259663/criminal_vi13fr.png"
+                }
                 className=" w-96 h-96 max-xl:mt-8 border-[#3d3d3d] border-double border-[5px] rounded-md mx-auto mt-7"
               />
             </div>

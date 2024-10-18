@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { clearCredentials } from "../../Redux/authSlice";
-import { loginUser } from "../../Redux/userSlice";
 
 const JoinDiscord = () => {
   const dispatch = useDispatch();
