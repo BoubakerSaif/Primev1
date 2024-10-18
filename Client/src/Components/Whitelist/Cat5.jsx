@@ -15,10 +15,10 @@ const Cat5 = ({ cat, whiteList, setWhiteList, setCat, setStep }) => {
     animate: { opacity: 1, x: 0 },
   };
   const epicaudio = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727536985/kick_oo8op3.mp3"
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1729246954/EpicIntro_mrtxes.mp3"
   );
   const textAudio = new Audio(
-    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727731515/morgan_x0mgg1.mp3"
+    "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1729246426/morgan_c5nhhe.mp3"
   );
   const [choice, setChoice] = useState("nothing");
   const [firstTry, setFirstTry] = useState(true);

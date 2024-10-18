@@ -35,7 +35,7 @@ const VideoNav = () => {
     >
       <video
         src={
-          "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1727909396/videonav_twapno.mp4"
+          "https://res.cloudinary.com/dl6o7cgmp/video/upload/v1729246699/Trailer_usu0kx.mp4"
         }
         autoPlay
         loop
