@@ -11,7 +11,7 @@ const MainHero_2 = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <img
-          src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729247137/c4_ek7ysd.png"
+          src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729374052/wallkeepr_lr83ku.png"
           className="w-[600px] max-lg:w-96  "
         />
         <div>
@@ -19,7 +19,7 @@ const MainHero_2 = () => {
             BECOME
           </p>
           <p className=" text-white font-bold flex-col text-5xl max-lg:text-4xl ">
-            LAWMAN
+            WALL KEEPER
           </p>
         </div>
       </motion.div>

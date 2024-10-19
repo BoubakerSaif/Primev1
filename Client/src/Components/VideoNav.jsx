@@ -78,7 +78,7 @@ const VideoNav = () => {
             </div>
           </Link>
           <div className=" mt-3 ml-3 h-fit flex items-center gap-2 bg-black bg-opacity-30 p-1  rounded-lg">
-            <LuServerOff /> <p>Server Off</p>
+            <LuServerOff /> <p>Server in progress</p>
             {/* <IoPeopleSharp className="text-xl" />
             <p>: 0</p> */}
           </div>

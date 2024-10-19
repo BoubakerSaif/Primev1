@@ -5,7 +5,7 @@ const MainHero_3 = () => {
   return (
     <div className=" bg-[#010101] text-center relative h-[650px] font-Poppins    ">
       <motion.div
-        className="flex items-center  absolute top-[-45%] right-[5%]  "
+        className="flex items-center absolute top-[-45%] right-[5%] gap-8  "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -15,11 +15,11 @@ const MainHero_3 = () => {
             BECOME
           </p>
           <p className=" text-white font-bold flex-col text-5xl max-lg:text-4xl ">
-            DOCTOR
+            SCIENTIST
           </p>
         </div>
         <img
-          src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729247128/c1_njnnl6.png"
+          src="https://res.cloudinary.com/dl6o7cgmp/image/upload/v1729374064/scientist_qe7yjx.png"
           className="w-[600px] max-lg:w-96  "
         />
       </motion.div>

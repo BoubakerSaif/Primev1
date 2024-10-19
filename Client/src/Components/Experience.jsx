@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { FaArrowUp } from "react-icons/fa6";
 
 const Experience = () => {
   return (
-    <div className=" w-full h-screen flex items-center justify-center   bg-[#010101] text-white text-center max-md:h-[400px] font-Poppins   ">
+    <div className=" w-full h-[300px] flex items-center justify-center   bg-[#010101] text-white text-center max-md:h-[400px] font-Poppins  relative  ">
+      <FaArrowUp
+        className=" border-[1px] fixed top-[95%] right-[2%] w-8 h-5  text-white z-99 hover:cursor-pointer"
+        onClick={() => {
+          window.scroll(0, 0);
+        }}
+      />
       <motion.div
         className="font-Poppins font-semibold"
         initial={{ opacity: 0 }}
