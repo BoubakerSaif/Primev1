@@ -21,7 +21,6 @@ const VideoNav = () => {
   const { myBetaApp, createdBetaApp, rejectedApp, acceptedApp } = useSelector(
     (state) => state.beta
   );
-  console.log(myBetaApp);
   const { userInfo } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
   const location = useLocation();
